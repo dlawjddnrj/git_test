@@ -1,7 +1,6 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include "qmath.h"
-#i
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -175,8 +174,4 @@ void MainWindow::on_pushButton_result_clicked()
     } else if (ui -> label -> text() == "A") {
         ui -> lineEdit_result -> setText(QString::number(qSqrt(first)));
     }
-}
-
-Window {
-
 }

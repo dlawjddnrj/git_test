@@ -56,8 +56,6 @@ private slots:
 
     void on_pushButton_result_clicked();
 
-    void on_MainWindow_iconSizeChanged(const QSize &iconSize);
-
 private:
     Ui::MainWindow *ui;
     double first, second;
