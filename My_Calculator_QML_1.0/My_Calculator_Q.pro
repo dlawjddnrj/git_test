@@ -14,7 +14,7 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        stuff.cpp
+        rectangleclickevent.cpp
 
 RESOURCES += qml.qrc \
     resources.qrc
@@ -31,4 +31,4 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 !isEmpty(target.path): INSTALLS += target
 
 HEADERS += \
-    stuff.h
+    rectangleclickevent.h

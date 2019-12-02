@@ -5,8 +5,11 @@
 
 class Stuff :public QObject
 {
+    Q_OBJECT
 public:
-    Stuff();
+    explicit Stuff(QObject *parent = nullptr);
+
+signals:
 
 public slots:
     void onClicked();

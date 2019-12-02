@@ -9,8 +9,10 @@ Window {
     title: qsTr("Hello World")
     color: "#a3d35e"
 //    objectName: "topwindow"
+
     Rectangle {
         id: rectangle
+        objectName: "rectangle"
         x: 156
         y: 148
         width: 713
@@ -18,8 +20,10 @@ Window {
         color: "#a69ace"
         border.width: 6
 //        objectName: "zerorect1"
+        signal clicked(int a)
         Rectangle {
             id: num_0
+            objectName: "num0"
             x: 155
             y: 385
             width: 90
@@ -33,6 +37,9 @@ Window {
                 anchors.fill: parent
                 onClicked: {
                     console.log("Clicked number 0 !!")
+                    //beakkyoungku
+                    //cpp로 data 를 넘기고, cpp에서 first_label 에, data를 넣 고싶다.
+                    rectangle.clicked(0)
                 }
             }
 
@@ -63,6 +70,7 @@ Window {
                 anchors.fill: parent
                 onClicked: {
                     console.log("Clicked number 1 !!")
+                    rectangle.clicked(1)
                 }
             }
         }
@@ -363,12 +371,14 @@ Window {
 
             Label {
                 id: first_label
+                objectName: "first_label"
                 x: 45
                 y: 21
                 width: 84
                 height: 32
                 Text {
                     id : first_label_text
+                    objectName: "first_label_text"
                     text: ""
                 }
                 font.pointSize: 20
