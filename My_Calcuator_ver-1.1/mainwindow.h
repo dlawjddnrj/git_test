@@ -58,7 +58,7 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
-    double first, second;
+    unsigned long long first, second;
 };
 
 #endif // MAINWINDOW_H
