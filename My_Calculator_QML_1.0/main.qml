@@ -45,7 +45,11 @@ Window {
 
             Text {
                 id: text_num_0
+<<<<<<< HEAD
                 objectName: "Text_num_0" //
+=======
+                objectName: text_num_0
+>>>>>>> 09b6683977f9fceb3a2fdb161d1d7e7202e48cf0
                 anchors.centerIn: parent
                 text: qsTr("0")
             }
@@ -402,7 +406,10 @@ Window {
                 height: first_label.height
                 Text {
                     id : seconed_label_text
+<<<<<<< HEAD
                     objectName: "seconed_label_text"
+=======
+>>>>>>> 09b6683977f9fceb3a2fdb161d1d7e7202e48cf0
                     text: ""
                 }
                 font.pointSize: 20
@@ -439,6 +446,7 @@ Window {
                 height: 198
                 fillMode: Image.PreserveAspectFit
                 source: "images/Quit.png"
+<<<<<<< HEAD
 
                 MouseArea{
                     anchors.fill: parent
@@ -446,6 +454,8 @@ Window {
                         rectangle.clicked(99)
                     }
                 }
+=======
+>>>>>>> 09b6683977f9fceb3a2fdb161d1d7e7202e48cf0
             }
         }
     }
