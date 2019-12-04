@@ -1,6 +1,6 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2019-11-27T14:20:37
+# Project created by QtCreator 2019-12-04T14:57:51
 #
 #-------------------------------------------------
 
@@ -8,7 +8,7 @@ QT       += core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
-TARGET = My_Calcuator
+TARGET = pdkFileManagement_01
 TEMPLATE = app
 
 # The following define makes your compiler emit warnings if you use

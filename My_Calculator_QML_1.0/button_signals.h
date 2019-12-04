@@ -1,6 +1,0 @@
-#ifndef BUTTON_SIGNALS_H
-#define BUTTON_SIGNALS_H
-
-
-
-#endif // BUTTON_SIGNALS_H
