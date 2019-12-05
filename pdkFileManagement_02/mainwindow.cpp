@@ -22,8 +22,18 @@ void MainWindow::on_pushButton_add_clicked()
 
     //////////  Jo /////////
     ui->tableWidget->setCellWidget(0, 0, label);
+<<<<<<< HEAD
     if(QString::compare(ui->lineEdit->text(),"") != 0){
 
+=======
+    if(QString::compare(ui->lineEdit->text(),"") == 1){
+        for(int i = ui->tableWidget->rowCount();i>5; )
+        {
+
+            i++;
+        }
+        //    ui->tableWidget->setCellWidget(1, 1, label);
+>>>>>>> a42aaf3d1de048f5834cbf029aa82ec49d64cd17
     }
 }
 
