@@ -25,6 +25,7 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
+#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -44,6 +45,7 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QLabel *label_nowDate;
+    QTextEdit *textEdit;
     QDateEdit *dateEdit;
     QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer_Top;
@@ -56,6 +58,7 @@ public:
     QSpacerItem *horizontalSpacer_Right;
     QPushButton *pushButton_add;
     QPushButton *pushButton_remove;
+    QPushButton *pushButton_save;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuHelp;
@@ -90,7 +93,7 @@ public:
         pushButton_quit->setGeometry(QRect(810, 330, 141, 71));
         layoutWidget = new QWidget(centralWidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(0, 0, 801, 397));
+        layoutWidget->setGeometry(QRect(0, 0, 844, 397));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -105,6 +108,11 @@ public:
         label_nowDate->setStyleSheet(QString::fromUtf8("App->setStyleSheet(\"QLineEdit { background-color: yellow } \");"));
 
         horizontalLayout->addWidget(label_nowDate);
+
+        textEdit = new QTextEdit(layoutWidget);
+        textEdit->setObjectName(QString::fromUtf8("textEdit"));
+
+        horizontalLayout->addWidget(textEdit);
 
         dateEdit = new QDateEdit(layoutWidget);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
@@ -186,10 +194,13 @@ public:
 
         pushButton_add = new QPushButton(centralWidget);
         pushButton_add->setObjectName(QString::fromUtf8("pushButton_add"));
-        pushButton_add->setGeometry(QRect(810, 80, 140, 70));
+        pushButton_add->setGeometry(QRect(810, 90, 140, 70));
         pushButton_remove = new QPushButton(centralWidget);
         pushButton_remove->setObjectName(QString::fromUtf8("pushButton_remove"));
         pushButton_remove->setGeometry(QRect(810, 250, 141, 71));
+        pushButton_save = new QPushButton(centralWidget);
+        pushButton_save->setObjectName(QString::fromUtf8("pushButton_save"));
+        pushButton_save->setGeometry(QRect(810, 170, 141, 71));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -227,12 +238,18 @@ public:
         actionExit->setText(QApplication::translate("MainWindow", "Exit", nullptr));
         pushButton_quit->setText(QApplication::translate("MainWindow", "Quit", nullptr));
         label_nowDate->setText(QApplication::translate("MainWindow", "\355\230\204\354\236\254 \353\202\240\354\247\234 : ", nullptr));
+        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
+"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
+"p, li { white-space: pre-wrap; }\n"
+"</style></head><body style=\" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
+"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">abc</p></body></html>", nullptr));
         label->setText(QApplication::translate("MainWindow", "\354\225\204\353\236\230\354\227\220 \353\263\264\354\235\264\353\212\224 \354\271\270\354\227\220 PDK File\353\252\205\354\235\204 \354\236\205\353\240\245 \355\233\204 Add \353\262\204\355\212\274\354\235\204 \353\210\204\353\245\264\354\213\234\354\230\244.", nullptr));
         lineEdit->setText(QString());
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "PDK File Name", nullptr));
         pushButton_add->setText(QApplication::translate("MainWindow", "Add", nullptr));
-        pushButton_remove->setText(QApplication::translate("MainWindow", "Remove", nullptr));
+        pushButton_remove->setText(QApplication::translate("MainWindow", "Top Remove", nullptr));
+        pushButton_save->setText(QApplication::translate("MainWindow", "Save", nullptr));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", nullptr));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
