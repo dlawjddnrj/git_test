@@ -264,7 +264,7 @@ release\moc_mainwindow.cpp: mainwindow.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qicon.h \
 		release\moc_predefs.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe
-	C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Please/pdkFileManagement_02/release/moc_predefs.h -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/mkspecs/win32-msvc -IC:/Please/pdkFileManagement_02 -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Git_Group_Server/pdkFileManagement_02/release/moc_predefs.h -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/mkspecs/win32-msvc -IC:/Git_Group_Server/pdkFileManagement_02 -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" mainwindow.h -o release\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -519,6 +519,7 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qicon.h \
 		ui_mainwindow.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QVariant \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\QIcon \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QAction \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qaction.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qactiongroup.h \
@@ -529,22 +530,12 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qguiapplication.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QComboBox \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qcombobox.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qstyleoption.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qvalidator.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qregularexpression.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qslider.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractslider.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qstyle.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qtabbar.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qrubberband.h \
-		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qabstractitemmodel.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QDateEdit \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qdatetimeedit.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qdatetime.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractspinbox.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qvalidator.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qregularexpression.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QHBoxLayout \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qboxlayout.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qlayout.h \
@@ -554,7 +545,15 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qheaderview.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractitemview.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractscrollarea.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qabstractitemmodel.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qitemselectionmodel.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractitemdelegate.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qstyleoption.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qslider.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qabstractslider.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qstyle.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qtabbar.h \
+		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qrubberband.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QLineEdit \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qlineedit.h \
 		..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qtextcursor.h \

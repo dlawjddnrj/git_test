@@ -24,6 +24,8 @@ private slots:
 
     void on_pushButton_remove_clicked();
 
+    void on_pushButton_save_clicked();
+
 private:
     Ui::MainWindow *ui;
 };
