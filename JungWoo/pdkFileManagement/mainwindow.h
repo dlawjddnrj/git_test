@@ -15,7 +15,7 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
-    QString m_string_AddTextLine;
+
 private slots:
 
     void on_pushButton_add_clicked();
@@ -24,7 +24,7 @@ private slots:
 
     void on_pushButton_remove_clicked();
 
-    void on_pushButton_save_clicked();
+    void on_pushButton_load_clicked();
 
 private:
     Ui::MainWindow *ui;
