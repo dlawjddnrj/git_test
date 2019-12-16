@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
+<<<<<<< HEAD:Calculator_JW/jungwoo.pro.user
 <!-- Written by QtCreator 4.9.1, 2019-12-06T16:34:45. -->
+=======
+<!-- Written by QtCreator 4.9.1, 2019-12-16T10:58:14. -->
+>>>>>>> 6280400... 030303:pdkFileManagement_03/pdkFileManagement_01.pro.user
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -305,9 +309,15 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
+<<<<<<< HEAD:Calculator_JW/jungwoo.pro.user
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">jungwoo</value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName"></value>
     <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Users/ghktk/Desktop/study/QT_QML_Study/jungwoo/jungwoo.pro</value>
+=======
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DefaultDisplayName">pdkFileManagement_01</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">pdkFileManagement_012</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:C:/Test/git_test/pdkFileManagement_03/pdkFileManagement_01.pro</value>
+>>>>>>> 6280400... 030303:pdkFileManagement_03/pdkFileManagement_01.pro.user
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="uint" key="RunConfiguration.QmlDebugServerPort">3768</value>
     <value type="bool" key="RunConfiguration.UseCppDebugger">false</value>
