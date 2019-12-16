@@ -25,7 +25,6 @@
 #include <QtWidgets/QSpacerItem>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QTableWidget>
-#include <QtWidgets/QTextEdit>
 #include <QtWidgets/QToolBar>
 #include <QtWidgets/QVBoxLayout>
 #include <QtWidgets/QWidget>
@@ -45,7 +44,6 @@ public:
     QHBoxLayout *horizontalLayout;
     QSpacerItem *horizontalSpacer;
     QLabel *label_nowDate;
-    QTextEdit *textEdit;
     QDateEdit *dateEdit;
     QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer_Top;
@@ -109,14 +107,9 @@ public:
 
         horizontalLayout->addWidget(label_nowDate);
 
-        textEdit = new QTextEdit(layoutWidget);
-        textEdit->setObjectName(QString::fromUtf8("textEdit"));
-
-        horizontalLayout->addWidget(textEdit);
-
         dateEdit = new QDateEdit(layoutWidget);
         dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        dateEdit->setDateTime(QDateTime(QDate(2019, 12, 6), QTime(0, 0, 0)));
+        dateEdit->setDateTime(QDateTime(QDate(2019, 12, 16), QTime(0, 0, 0)));
 
         horizontalLayout->addWidget(dateEdit);
 
@@ -238,11 +231,6 @@ public:
         actionExit->setText(QApplication::translate("MainWindow", "Exit", nullptr));
         pushButton_quit->setText(QApplication::translate("MainWindow", "Quit", nullptr));
         label_nowDate->setText(QApplication::translate("MainWindow", "\355\230\204\354\236\254 \353\202\240\354\247\234 : ", nullptr));
-        textEdit->setHtml(QApplication::translate("MainWindow", "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-"<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\n"
-"p, li { white-space: pre-wrap; }\n"
-"</style></head><body style=\" font-family:'Arial'; font-size:12pt; font-weight:400; font-style:normal;\">\n"
-"<p style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;\">abc</p></body></html>", nullptr));
         label->setText(QApplication::translate("MainWindow", "\354\225\204\353\236\230\354\227\220 \353\263\264\354\235\264\353\212\224 \354\271\270\354\227\220 PDK File\353\252\205\354\235\204 \354\236\205\353\240\245 \355\233\204 Add \353\262\204\355\212\274\354\235\204 \353\210\204\353\245\264\354\213\234\354\230\244.", nullptr));
         lineEdit->setText(QString());
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);

@@ -62,34 +62,52 @@ void MainWindow::on_pushButton_save_clicked()
 
 //    out.setVersion(QDataStream::Qt_5_12);
 
-    QString ApplicationPath = QApplication::applicationDirPath();
-    QFile File(ApplicationPath + "C:\\Git_Group_Server\\pdkFileManagement_01\\pdklist.txt");
+//    QString ApplicationPath = QApplication::applicationDirPath();
+//    QFile File(ApplicationPath + "C:\\Git_Group_Server\\pdkFileManagement_01\\pdklist.txt");
 
-    QDir Directory("test.txt");
+//    QDir Directory("test.txt");
 
-    // 파일 읽기
-    if(!File.open(QFile::ReadOnly | QFile::Text)) {     // 읽기 전용, 텍스트로 파일 열기
-        if(!File.exists()) {        // 파일이 존재하지 않으면..
-            Directory.mkdir("C:\\Git_Group_Server\\pdkFileManagement_01");
-        } else {
-            close();
+//    // 파일 읽기
+//    if(!File.open(QFile::ReadOnly | QFile::Text)) {     // 읽기 전용, 텍스트로 파일 열기
+//        if(!File.exists()) {        // 파일이 존재하지 않으면..
+//            Directory.mkdir("C:\\Git_Group_Server\\pdkFileManagement_01");
+//        } else {
+//            close();
+//        }
+//    }
+
+//    QTextStream OpenFile(&File);
+//    QString ConfigText;
+
+//    while(!OpenFile.atEnd()) {      // 파일 끝까지 읽어서
+//        ConfigText = OpenFile.readLine();   // 한 라인씩 읽어서 변수에 적용
+//    }
+
+//    File.close();
+
+//    // 파일 쓰기
+//    File.open(QFile::WriteOnly | QFile::Append | QFile::Text);
+//    QTextStream SaveFile(&File);
+//    SaveStream << "abc" << "\n";
+//    SaveStream << "123" << "\n";
+
+//    File.close();
+    QFile *file = new QFile;
+
+    QString filename = "sample.txt";
+
+    file->setFileName(QApplication::applicationDirPath() + "/" + filename);
+
+    if (!file->open(QIODevice::WriteOnly))
+    {
+        if (!file->exists())
+        {
+
         }
     }
 
-    QTextStream OpenFile(&File);
-    QString ConfigText;
+    QString str("sample Text \n");
 
-    while(!OpenFile.atEnd()) {      // 파일 끝까지 읽어서
-        ConfigText = OpenFile.readLine();   // 한 라인씩 읽어서 변수에 적용
-    }
-
-    File.close();
-
-    // 파일 쓰기
-    File.open(QFile::WriteOnly | QFile::Append | QFile::Text);
-    QTextStream SaveFile(&File);
-    SaveStream << "abc" << "\n";
-    SaveStream << "123" << "\n";
-
-    File.close();
+    file->write(str.toUtf8());
+    file->close();
 }
