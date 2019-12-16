@@ -16,6 +16,8 @@ public:
     explicit MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
     QString m_string_AddTextLine;
+    void write(QString filename);
+    void read(QString filename);
 private slots:
 
     void on_pushButton_add_clicked();
@@ -24,10 +26,11 @@ private slots:
 
     void on_pushButton_remove_clicked();
 
-    void on_pushButton_save_clicked();
 
 private:
     Ui::MainWindow *ui;
+    QString m_str;
+
 };
 
 #endif // MAINWINDOW_H

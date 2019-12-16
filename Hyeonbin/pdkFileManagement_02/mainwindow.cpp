@@ -1,10 +1,12 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
 #include <QFile>
-
+#include <QTextStream>
 #include <QLabel>
+#include <QString>
+#include <QtDebug>
 
-MainWindow::MainWindow(QWidget *parent) :
+MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
     ui(new Ui::MainWindow)
 {
@@ -13,10 +15,44 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_quit->setStyleSheet(style);
 }
 
-MainWindow::~MainWindow()
+
+void MainWindow::read(QString filename)
 {
-    delete ui;
+    QFile file(filename);
+    if(!file.open(QFile::ReadOnly | QFile::Text))
+    {
+        qDebug() << " Could not open the file for reading";
+        return;
+    }
+
+    QTextStream in(&file);
+    QString myText = in.readAll();
+    qDebug() << myText;
+
+    file.close();
 }
+
+void MainWindow::write(QString filename)
+{
+    QFile file(filename);
+    // Trying to open in WriteOnly and Text mode
+    if(!file.open(QFile::WriteOnly |QFile::Append | QFile::Text))
+    {
+        qDebug() << " Could not open file for writing";
+        return;
+    }
+
+    // To write text, we use operator<<(),
+    // which is overloaded to take
+    // a QTextStream on the left
+    // and data types (including QString) on the right
+
+    QTextStream out(&file);
+    out << m_str<<endl;
+    file.flush();
+    file.close();
+}
+
 
 void MainWindow::on_pushButton_add_clicked()
 {
@@ -26,19 +62,28 @@ void MainWindow::on_pushButton_add_clicked()
 
     tableItem->setText(ui->lineEdit->text());
 
-    if(tableItem->text() != "") {                   // 수정 되는것
+    if(tableItem->text() != "") {
         for(int i = 0; i < 1; i++) {
             ui->tableWidget->insertRow(i);
             ui->tableWidget->setItem(i, 0, tableItem);
+            m_str = ui->tableWidget->item(i, 0)->text();
         }
     }
-    //    if(label->text() != "") {                     // 수정 안되는 코드
-    //        for(int i = 0; i < 1; i++) {
-    //            ui->tableWidget->insertRow(i);
-    //            ui->tableWidget->setCellWidget(i, 0, label);      setCellWidget으로 텍스트를 추가하면서 넣었기 때문에 row에 대한 수정이 불가능
-    //        }
-    //    }
+
+
+    QString filename = "C:/Test/pdkfileManagemet.txt";
+    read(filename);
+    write(filename);
 }
+
+
+
+
+MainWindow::~MainWindow()
+{
+    delete ui;
+}
+
 
 void MainWindow::on_pushButton_quit_clicked()
 {
@@ -48,24 +93,4 @@ void MainWindow::on_pushButton_quit_clicked()
 void MainWindow::on_pushButton_remove_clicked()
 {
     ui->tableWidget->removeRow(0);
-}
-
-void MainWindow::on_pushButton_save_clicked()
-{
-
-//    QFile *file = new QFile;
-//    QString filename = "New_upload_pdk_management";
-//    file->setFileName(QApplication::applicationDirPath() + "/" + filename); // 파일의 위치와 파일명 설정
-
-//    if (!file->open(QIODevice::WriteOnly)) // 파일을 오픈
-//    {
-//        if (!file->exists()) // 파일의 존재 유무 확인
-//        {
-
-//        }
-//    }
-//    QString str (ui->lineEdit->text()); // 파일에 작성할 텍스트
-
-//    file->write(str.toUtf8()); // 파일에 텍스트를 작성
-
 }
