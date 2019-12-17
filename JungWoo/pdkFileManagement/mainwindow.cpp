@@ -20,6 +20,14 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_load->setStyleSheet(loadStyle);
     ui->pushButton_remove->setStyleSheet(removeStyle);
     ui->pushButton_quit->setStyleSheet(quitStyle);
+
+    QPixmap background(":/backgroundImage.png");
+
+    QPalette p(palette());
+    p.setBrush(QPalette::Background, background);
+
+    setAutoFillBackground(true);
+    setPalette(p);
 }
 
 MainWindow::~MainWindow()

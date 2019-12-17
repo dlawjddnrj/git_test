@@ -78,7 +78,7 @@ void MainWindow::on_pushButton_add_clicked()
     }
 
 
-    QString filename = "C:/Test/pdkfileManagemet.txt";
+    QString filename = "C:/Git_Group_Server/Hyeonbin/pdkFileManagement_02/test.txt";
     read(filename);
     write(filename);
 }
