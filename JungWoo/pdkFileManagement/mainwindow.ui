@@ -254,7 +254,7 @@
      </rect>
     </property>
     <property name="text">
-     <string>Top Remove</string>
+     <string>Delete</string>
     </property>
    </widget>
    <widget class="QPushButton" name="pushButton_load">

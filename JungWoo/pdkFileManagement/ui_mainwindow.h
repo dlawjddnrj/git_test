@@ -236,7 +236,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "PDK File Name", nullptr));
         pushButton_add->setText(QApplication::translate("MainWindow", "Add", nullptr));
-        pushButton_remove->setText(QApplication::translate("MainWindow", "Top Remove", nullptr));
+        pushButton_remove->setText(QApplication::translate("MainWindow", "Delete", nullptr));
         pushButton_load->setText(QApplication::translate("MainWindow", "Load", nullptr));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", nullptr));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", nullptr));

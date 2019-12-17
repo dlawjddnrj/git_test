@@ -4,16 +4,17 @@
 #include <QString>
 #include <QTextStream>
 #include <QDebug>
+#include <QMessageBox>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QString addStyle = "color: blue";
-    QString loadStyle = "color: pink";
-    QString removeStyle = "color: red";
-    QString quitStyle = "color: yellow";
+    QString addStyle = "color: white; background: blue";
+    QString loadStyle = "color: white; background: green";
+    QString removeStyle = "color: white; background: red";
+    QString quitStyle = "color: white; background: black";
 
     ui->pushButton_add->setStyleSheet(addStyle);
     ui->pushButton_load->setStyleSheet(loadStyle);
@@ -33,7 +34,7 @@ void MainWindow::on_pushButton_add_clicked()
 
     tableItem->setText(ui->lineEdit->text());
 
-    if(tableItem->text() != "") {                   // 수정 되는것
+    if(tableItem->text() != "") {
         for(int i = 0; i < 1; i++) {
             ui->tableWidget->insertRow(i);
             ui->tableWidget->setItem(i, 0, tableItem);
@@ -41,7 +42,6 @@ void MainWindow::on_pushButton_add_clicked()
     }
 
     QFile mFile(mFilename);
-
     QTextStream out(&mFile);
 
     if (!mFile.open(QFile::WriteOnly | QFile::Append | QFile::Text))
@@ -54,6 +54,8 @@ void MainWindow::on_pushButton_add_clicked()
     QString userInput = ui->tableWidget->item(index, 0)->text();
     out << userInput << endl;
 
+    ui->lineEdit->setText("");      // add 버튼을 누르고 .txt 파일에 저장 후 lineEdit에는 텍스트를 자동으로 지워주는 단계.
+
     mFile.flush();
     mFile.close();
 }
@@ -65,7 +67,20 @@ void MainWindow::on_pushButton_quit_clicked()
 
 void MainWindow::on_pushButton_remove_clicked()
 {
-    ui->tableWidget->removeRow(0);
+    QMessageBox::StandardButton reply = QMessageBox::question(this,
+    "pdkFileManagement", "Will you really delete the text file?",
+    QMessageBox::Yes | QMessageBox::No);
+
+    if (reply == QMessageBox::Yes) {
+        QFile::remove("C:/Git_Group_Server/JungWoo/pdkFileManagement/pdklist.txt"); // file 삭제 코드
+        QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
+
+
+    }
+
+    else {
+        return;
+    }
 }
 
 void MainWindow::on_pushButton_load_clicked()
