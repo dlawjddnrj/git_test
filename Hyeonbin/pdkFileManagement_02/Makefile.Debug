@@ -580,7 +580,8 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QFile \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QTextStream \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QString \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QtDebug
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QtDebug \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QStringList
 
 debug\moc_mainwindow.obj: debug\moc_mainwindow.cpp 
 

@@ -264,7 +264,7 @@ release\moc_mainwindow.cpp: mainwindow.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qicon.h \
 		release\moc_predefs.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe
-	C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Users/ghktk/Desktop/pdkFileManagement_01/release/moc_predefs.h -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/mkspecs/win32-msvc -IC:/Users/ghktk/Desktop/pdkFileManagement_01 -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" mainwindow.h -o release\moc_mainwindow.cpp
+	C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Test/git_test/JungWoo/pdkFileManagement/release/moc_predefs.h -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/mkspecs/win32-msvc -IC:/Test/git_test/JungWoo/pdkFileManagement -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtWidgets -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\BuildTools\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\NETFXSDK\4.6.1\include\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" mainwindow.h -o release\moc_mainwindow.cpp
 
 compiler_moc_objc_header_make_all:
 compiler_moc_objc_header_clean:
@@ -405,11 +405,7 @@ release\main.obj: main.cpp mainwindow.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qeventloop.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qdesktopwidget.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qguiapplication.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qinputmethod.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QFile \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QString \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QTextStream
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qinputmethod.h
 
 release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QLabel \
@@ -582,10 +578,9 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QVBoxLayout \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QWidget \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QFile \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDir \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qdir.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qfileinfo.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QTextStream
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QString \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QTextStream \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 
