@@ -257,6 +257,19 @@
      <string>Top Remove</string>
     </property>
    </widget>
+   <widget class="QPushButton" name="pushButton_Load">
+    <property name="geometry">
+     <rect>
+      <x>810</x>
+      <y>330</y>
+      <width>141</width>
+      <height>71</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Load</string>
+    </property>
+   </widget>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">

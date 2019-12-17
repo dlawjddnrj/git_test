@@ -55,6 +55,7 @@ public:
     QSpacerItem *horizontalSpacer_Right;
     QPushButton *pushButton_add;
     QPushButton *pushButton_remove;
+    QPushButton *pushButton_Load;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuHelp;
@@ -188,6 +189,9 @@ public:
         pushButton_remove = new QPushButton(centralWidget);
         pushButton_remove->setObjectName(QString::fromUtf8("pushButton_remove"));
         pushButton_remove->setGeometry(QRect(810, 250, 141, 71));
+        pushButton_Load = new QPushButton(centralWidget);
+        pushButton_Load->setObjectName(QString::fromUtf8("pushButton_Load"));
+        pushButton_Load->setGeometry(QRect(810, 330, 141, 71));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
@@ -228,6 +232,7 @@ public:
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "PDK File Name", nullptr));
         pushButton_add->setText(QApplication::translate("MainWindow", "Add", nullptr));
         pushButton_remove->setText(QApplication::translate("MainWindow", "Top Remove", nullptr));
+        pushButton_Load->setText(QApplication::translate("MainWindow", "Load", nullptr));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", nullptr));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi

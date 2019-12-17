@@ -5,6 +5,13 @@
 #include <QLabel>
 #include <QString>
 #include <QtDebug>
+#include <QStringList>
+
+/*****Hyeon Bin*****/
+/****Development****/
+
+/*txt파일을 불러와 txt파일에 있는 text를 table 위젯에 load 하는 기능 추가예정 */
+/* 2019.12.16 */
 
 MainWindow::MainWindow(QWidget *parent):
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
@@ -56,7 +63,7 @@ void MainWindow::write(QString filename)
 
 void MainWindow::on_pushButton_add_clicked()
 {
-    // 텍스트 리스트 뷰
+
     QLabel label;
     QTableWidgetItem *tableItem = new QTableWidgetItem();
 
@@ -93,4 +100,35 @@ void MainWindow::on_pushButton_quit_clicked()
 void MainWindow::on_pushButton_remove_clicked()
 {
     ui->tableWidget->removeRow(0);
+
+    /* remove버튼 클릭시 txt파일에 있던 text도 삭제 */
+}
+
+void MainWindow::on_pushButton_Load_clicked()
+{
+    /* 주석 해제 후 Run 하지 말것 Error */
+//    QFile file("C:/Test/pdkfileManagemet.txt");
+//    QTextStream in(&file);
+//    QString line = in.readLine();
+//    if(!file.open(QIODevice::ReadOnly|QIODevice::Text))
+//        return;
+
+
+//    while (!in.atEnd()) {
+//        QStringList fields = line.split(" , ");
+
+//    }
+
+//    QLabel label;
+//    QTableWidgetItem *loadItem = new QTableWidgetItem();
+
+//        int i=0;
+
+//        while(m_str=="") {
+//            ui->tableWidget->insertRow(i);
+//            ui->tableWidget->setItem(i, 0, loadItem);
+//            m_str = ui->tableWidget->item(i, 0)->text();
+//            i++;
+//        }
+
 }

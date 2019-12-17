@@ -1,7 +1,8 @@
 #include "mainwindow.h"
 #include <QApplication>
 #include <QCoreApplication>
-
+/*****Hyeon Bin*****/
+/****Development****/
 
 
 int main(int argc, char *argv[])
