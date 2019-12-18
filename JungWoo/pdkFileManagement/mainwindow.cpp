@@ -5,6 +5,7 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QMessageBox>
+#include <QModelIndex>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
@@ -18,8 +19,18 @@ MainWindow::MainWindow(QWidget *parent) :
 
     ui->pushButton_add->setStyleSheet(addStyle);
     ui->pushButton_load->setStyleSheet(loadStyle);
-    ui->pushButton_remove->setStyleSheet(removeStyle);
+    ui->pushButton_delete->setStyleSheet(removeStyle);
     ui->pushButton_quit->setStyleSheet(quitStyle);
+
+    /* {        mainwindow의 배경화면 이미지 설정하는 코드. (이상해서 보완해야 함)
+    QPixmap background(":/backgroundImage.png");
+
+    QPalette p(palette());
+    p.setBrush(QPalette::Background, background);
+
+    setAutoFillBackground(true);
+    setPalette(p);
+    } */
 }
 
 MainWindow::~MainWindow()
@@ -65,17 +76,33 @@ void MainWindow::on_pushButton_quit_clicked()
     close();
 }
 
-void MainWindow::on_pushButton_remove_clicked()
+void MainWindow::on_pushButton_delete_clicked()
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this,
     "pdkFileManagement", "Will you really delete the text file?",
     QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
+<<<<<<< HEAD
         QFile::remove("C:/Test/git_test/JungWoo/pdkFileManagement/pdkFileManagement.txt"); // file 삭제 코드
         QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
 
+=======
+        QFile::remove("C:/Git_Group_Server/JungWoo/pdkFileManagement/pdklist.txt"); // file 삭제 코드
+>>>>>>> b0c559ad0ac23eda8df5c4550292eec68670c695
 
+        for(int i = 0; i < ui->tableWidget->rowCount(); i++) {  // row 삭제 코드
+            ui->tableWidget->setRowCount(0);
+            ui->tableWidget->removeRow(i);
+
+            if (ui->tableWidget->rowCount() == 0) {     // 제대로 삭제 되었다면 row에는 0이 들어가기 때문에 row가 비어있으면 성공적으로 삭제되었다는 메시지 발생
+                QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
+            }
+            else {
+                QMessageBox::critical(this, "pdkFileManagement", "The deletion failed because an error occurred while deleting the txt file.");
+                return;
+            }
+        }
     }
 
     else {
@@ -96,9 +123,14 @@ void MainWindow::on_pushButton_load_clicked()
 
     while( !in.atEnd() ) {
         QString line = in.readLine();
-        qDebug() << line << endl;       // 이곳에 ui 안에 테이블위젯 안에 아이템중 row들을 하나씩 추가하여 .txt 파일에 있는 값들을 넣어주기.
+        qDebug() << line << endl;
+
+        ui->tableWidget->insertRow(0);
+        ui->tableWidget->setItem(0, 0, new QTableWidgetItem(line));
     }
-//    QString mText = in.readAll();
+
+    QString mText = in.readAll();
+
     mFile.flush();
     mFile.close();
 }

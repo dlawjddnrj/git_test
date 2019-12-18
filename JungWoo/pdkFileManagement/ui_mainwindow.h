@@ -42,7 +42,6 @@ public:
     QPushButton *pushButton_quit;
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
-    QSpacerItem *horizontalSpacer;
     QLabel *label_nowDate;
     QDateEdit *dateEdit;
     QVBoxLayout *verticalLayout_2;
@@ -55,7 +54,7 @@ public:
     QSpacerItem *verticalSpacer_Bottom;
     QSpacerItem *horizontalSpacer_Right;
     QPushButton *pushButton_add;
-    QPushButton *pushButton_remove;
+    QPushButton *pushButton_delete;
     QPushButton *pushButton_load;
     QMenuBar *menuBar;
     QMenu *menuFile;
@@ -67,7 +66,7 @@ public:
     {
         if (MainWindow->objectName().isEmpty())
             MainWindow->setObjectName(QString::fromUtf8("MainWindow"));
-        MainWindow->resize(969, 471);
+        MainWindow->resize(1007, 465);
         QFont font;
         font.setFamily(QString::fromUtf8("Arial"));
         font.setPointSize(12);
@@ -88,7 +87,7 @@ public:
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
         pushButton_quit = new QPushButton(centralWidget);
         pushButton_quit->setObjectName(QString::fromUtf8("pushButton_quit"));
-        pushButton_quit->setGeometry(QRect(810, 330, 141, 71));
+        pushButton_quit->setGeometry(QRect(850, 330, 141, 71));
         layoutWidget = new QWidget(centralWidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
         layoutWidget->setGeometry(QRect(0, 0, 850, 397));
@@ -97,10 +96,6 @@ public:
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
         horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
-        horizontalSpacer = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayout->addItem(horizontalSpacer);
-
         label_nowDate = new QLabel(layoutWidget);
         label_nowDate->setObjectName(QString::fromUtf8("label_nowDate"));
         label_nowDate->setStyleSheet(QString::fromUtf8("App->setStyleSheet(\"QLineEdit { background-color: yellow } \");"));
@@ -187,17 +182,17 @@ public:
 
         pushButton_add = new QPushButton(centralWidget);
         pushButton_add->setObjectName(QString::fromUtf8("pushButton_add"));
-        pushButton_add->setGeometry(QRect(810, 90, 140, 70));
-        pushButton_remove = new QPushButton(centralWidget);
-        pushButton_remove->setObjectName(QString::fromUtf8("pushButton_remove"));
-        pushButton_remove->setGeometry(QRect(810, 250, 141, 71));
+        pushButton_add->setGeometry(QRect(850, 90, 140, 70));
+        pushButton_delete = new QPushButton(centralWidget);
+        pushButton_delete->setObjectName(QString::fromUtf8("pushButton_delete"));
+        pushButton_delete->setGeometry(QRect(850, 250, 141, 71));
         pushButton_load = new QPushButton(centralWidget);
         pushButton_load->setObjectName(QString::fromUtf8("pushButton_load"));
-        pushButton_load->setGeometry(QRect(810, 170, 141, 71));
+        pushButton_load->setGeometry(QRect(850, 170, 141, 71));
         MainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 969, 21));
+        menuBar->setGeometry(QRect(0, 0, 1007, 21));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuHelp = new QMenu(menuBar);
@@ -236,7 +231,7 @@ public:
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
         ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "PDK File Name", nullptr));
         pushButton_add->setText(QApplication::translate("MainWindow", "Add", nullptr));
-        pushButton_remove->setText(QApplication::translate("MainWindow", "Delete", nullptr));
+        pushButton_delete->setText(QApplication::translate("MainWindow", "Delete", nullptr));
         pushButton_load->setText(QApplication::translate("MainWindow", "Load", nullptr));
         menuFile->setTitle(QApplication::translate("MainWindow", "File", nullptr));
         menuHelp->setTitle(QApplication::translate("MainWindow", "Help", nullptr));

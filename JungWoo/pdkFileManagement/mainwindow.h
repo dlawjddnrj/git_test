@@ -22,7 +22,7 @@ private slots:
 
     void on_pushButton_quit_clicked();
 
-    void on_pushButton_remove_clicked();
+    void on_pushButton_delete_clicked();
 
     void on_pushButton_load_clicked();
 
