@@ -30,7 +30,7 @@ MainWindow::~MainWindow()
 void MainWindow::on_pushButton_add_clicked()
 {
     QTableWidgetItem *tableItem = new QTableWidgetItem();
-    QString mFilename = "C:/Test/git_test/JungWoo/pdkFileManagement/pdkFileManagement.txt";
+    QString mFilename = "C:/test/git_test/Hyeonbin/loadCode/pdkFileManagement/pdkFileManagement.txt";
 
     tableItem->setText(ui->lineEdit->text());
 
@@ -52,7 +52,7 @@ void MainWindow::on_pushButton_add_clicked()
 
     int index = tableItem->row();
     QString userInput = ui->tableWidget->item(index, 0)->text();
-    out << userInput << endl;
+    out << userInput<<endl;;
 
     ui->lineEdit->setText("");      // add 버튼을 누르고 .txt 파일에 저장 후 lineEdit에는 텍스트를 자동으로 지워주는 단계.
 
@@ -68,11 +68,11 @@ void MainWindow::on_pushButton_quit_clicked()
 void MainWindow::on_pushButton_remove_clicked()
 {
     QMessageBox::StandardButton reply = QMessageBox::question(this,
-    "pdkFileManagement", "Will you really delete the text file?",
-    QMessageBox::Yes | QMessageBox::No);
+                                                              "pdkFileManagement", "Will you really delete the text file?",
+                                                              QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
-        QFile::remove("C:/Test/git_test/JungWoo/pdkFileManagement/pdkFileManagement.txt"); // file 삭제 코드
+        QFile::remove("C:/test/git_test/Hyeonbin/loadCode/pdkFileManagement/pdkFileManagement.txt"); // file 삭제 코드
         QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
 
 
@@ -85,8 +85,8 @@ void MainWindow::on_pushButton_remove_clicked()
 
 void MainWindow::on_pushButton_load_clicked()
 {
-    QFile mFile("pdkFileManagement.txt");
 
+    QFile mFile("pdkFileManagement.txt");
     if (!mFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
         qDebug() << "read!!";
@@ -96,9 +96,19 @@ void MainWindow::on_pushButton_load_clicked()
 
     while( !in.atEnd() ) {
         QString line = in.readLine();
-        qDebug() << line << endl;       // 이곳에 ui 안에 테이블위젯 안에 아이템중 row들을 하나씩 추가하여 .txt 파일에 있는 값들을 넣어주기.
+        qDebug() << line << endl;
+
+        QTableWidgetItem *read_Line = new QTableWidgetItem(line);
+
+        if(tableItem != read_Line){
+            ui->tableWidget->insertRow(0);
+            ui->tableWidget->setItem(0, 0, read_Line);
+        }
     }
-//    QString mText = in.readAll();
+
+
+
+    QString mText = in.readAll();
     mFile.flush();
     mFile.close();
 }
