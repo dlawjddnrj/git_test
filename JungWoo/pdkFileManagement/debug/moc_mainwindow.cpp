@@ -35,13 +35,13 @@ QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
 QT_MOC_LITERAL(1, 11, 25), // "on_pushButton_add_clicked"
 QT_MOC_LITERAL(2, 37, 0), // ""
 QT_MOC_LITERAL(3, 38, 26), // "on_pushButton_quit_clicked"
-QT_MOC_LITERAL(4, 65, 28), // "on_pushButton_remove_clicked"
+QT_MOC_LITERAL(4, 65, 28), // "on_pushButton_delete_clicked"
 QT_MOC_LITERAL(5, 94, 26) // "on_pushButton_load_clicked"
 
     },
     "MainWindow\0on_pushButton_add_clicked\0"
     "\0on_pushButton_quit_clicked\0"
-    "on_pushButton_remove_clicked\0"
+    "on_pushButton_delete_clicked\0"
     "on_pushButton_load_clicked"
 };
 #undef QT_MOC_LITERAL
@@ -82,7 +82,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         switch (_id) {
         case 0: _t->on_pushButton_add_clicked(); break;
         case 1: _t->on_pushButton_quit_clicked(); break;
-        case 2: _t->on_pushButton_remove_clicked(); break;
+        case 2: _t->on_pushButton_delete_clicked(); break;
         case 3: _t->on_pushButton_load_clicked(); break;
         default: ;
         }
