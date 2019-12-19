@@ -6,6 +6,7 @@
 #include <QDebug>
 #include <QMessageBox>
 #include <QModelIndex>
+#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
@@ -60,6 +61,11 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 void MainWindow::on_pushButton_add_clicked()
 {
     QTableWidgetItem *tableItem = new QTableWidgetItem();
+
+    QString path = "C:/Git_Group_Server/JungWoo/pdkFileManagement";
+    QDir dir(path);
+    dir.mkpath(path);
+
     QString mFilename = "C:/Git_Group_Server/JungWoo/pdkFileManagement/pdklist.txt";
 
     tableItem->setText(ui->lineEdit->text());
@@ -76,7 +82,7 @@ void MainWindow::on_pushButton_add_clicked()
 
     if (!mFile.open(QFile::WriteOnly | QFile::Append | QFile::Text))
     {
-        qDebug() << "write!!";
+        QMessageBox::critical(this, "pdkFileManagement", "Input failed because file does not exist.");
         return;
     }
 
