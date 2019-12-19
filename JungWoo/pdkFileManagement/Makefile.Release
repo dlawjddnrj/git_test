@@ -583,7 +583,8 @@ release\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QMessageBox \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qdialog.h
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qdialog.h \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QModelIndex
 
 release\moc_mainwindow.obj: release\moc_mainwindow.cpp 
 

@@ -72,7 +72,7 @@ public:
         font.setPointSize(12);
         MainWindow->setFont(font);
         QIcon icon;
-        icon.addFile(QString::fromUtf8("mangementIcon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8("managementIcon.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setIconSize(QSize(20, 20));
         actionSave = new QAction(MainWindow);

@@ -38,6 +38,25 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    QString text;
+        switch(event->key())
+        {
+        case Qt::Key_Enter: text ="Key_Enter"; break;
+
+        default: break;
+        }
+
+        //qDebug() << QString::number(event->key());
+
+        if(text == "Key_Enter") {
+            on_pushButton_add_clicked();
+        } else {
+            return;
+        }
+}
+
 void MainWindow::on_pushButton_add_clicked()
 {
     QTableWidgetItem *tableItem = new QTableWidgetItem();
@@ -91,8 +110,7 @@ void MainWindow::on_pushButton_delete_clicked()
 
             if (ui->tableWidget->rowCount() == 0) {     // 제대로 삭제 되었다면 row에는 0이 들어가기 때문에 row가 비어있으면 성공적으로 삭제되었다는 메시지 발생
                 QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
-            }
-            else {
+            } else {
                 QMessageBox::critical(this, "pdkFileManagement", "The deletion failed because an error occurred while deleting the txt file.");
                 return;
             }
@@ -110,9 +128,10 @@ void MainWindow::on_pushButton_load_clicked()
 
     if (!mFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        qDebug() << "read!!";
+        QMessageBox::critical(this, "pdkFileManagement", "Failed to load file because file does not exist. (Make sure that the file exists.)");
         return;
     }
+
     QTextStream in(&mFile);
 
     while( !in.atEnd() ) {
@@ -122,8 +141,6 @@ void MainWindow::on_pushButton_load_clicked()
         ui->tableWidget->insertRow(0);
         ui->tableWidget->setItem(0, 0, new QTableWidgetItem(line));
     }
-
-    QString mText = in.readAll();
 
     mFile.flush();
     mFile.close();

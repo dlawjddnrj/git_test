@@ -3,6 +3,7 @@
 
 #include <QLabel>
 #include <QMainWindow>
+#include <QKeyEvent>
 
 namespace Ui {
 class MainWindow;
@@ -28,6 +29,9 @@ private slots:
 
 private:
     Ui::MainWindow *ui;
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // MAINWINDOW_H
