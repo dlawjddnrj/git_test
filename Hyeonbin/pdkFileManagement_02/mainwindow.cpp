@@ -107,29 +107,6 @@ void MainWindow::on_pushButton_remove_clicked()
 
 void MainWindow::on_pushButton_Load_clicked()
 {
-    /* 주석 해제 후 Run 하지 말것 Error */
-//    QFile file("C:/Test/pdkfileManagemet.txt");
-//    QTextStream in(&file);
-//    QString line = in.readLine();
-//    if(!file.open(QIODevice::ReadOnly|QIODevice::Text))
-//        return;
 
-
-//    while (!in.atEnd()) {
-//        QStringList fields = line.split(" , ");
-
-//    }
-
-//    QLabel label;
-//    QTableWidgetItem *loadItem = new QTableWidgetItem();
-
-//        int i=0;
-
-//        while(m_str=="") {
-//            ui->tableWidget->insertRow(i);
-//            ui->tableWidget->setItem(i, 0, loadItem);
-//            m_str = ui->tableWidget->item(i, 0)->text();
-//            i++;
-//        }
 
 }
