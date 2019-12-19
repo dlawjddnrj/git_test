@@ -100,8 +100,9 @@ void MainWindow::on_pushButton_quit_clicked()
 void MainWindow::on_pushButton_remove_clicked()
 {
     ui->tableWidget->removeRow(0);
-
-    /* remove버튼 클릭시 txt파일에 있던 text도 삭제 */
+    m_str = "";
+    QString filename = "C:/Test/pdkfileManagemet.txt";
+    read(filename);
 }
 
 void MainWindow::on_pushButton_Load_clicked()

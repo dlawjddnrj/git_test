@@ -222,7 +222,6 @@ Makefile: pdkFileManagement_01.pro ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mk
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\qt_config.prf \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\win32-msvc\qmake.conf \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\spec_post.prf \
-		.qmake.stash \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\exclusive_builds.prf \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\common\msvc-version.conf \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\toolchain.prf \
@@ -397,7 +396,6 @@ Makefile: pdkFileManagement_01.pro ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mk
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\qt_config.prf:
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\win32-msvc\qmake.conf:
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\spec_post.prf:
-.qmake.stash:
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\exclusive_builds.prf:
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\common\msvc-version.conf:
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\toolchain.prf:
