@@ -10,6 +10,7 @@ greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 TARGET = pdkFileManagement_01
 TEMPLATE = app
+#RC_FILE = pdkM.rc 아이콘 만드는 건데 안돼 ㅠㅠ
 
 # The following define makes your compiler emit warnings if you use
 # any feature of Qt which has been marked as deprecated (the exact warnings

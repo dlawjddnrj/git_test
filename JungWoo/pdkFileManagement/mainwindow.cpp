@@ -38,10 +38,29 @@ MainWindow::~MainWindow()
     delete ui;
 }
 
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    QString text;
+        switch(event->key())
+        {
+        case Qt::Key_Enter: text ="Key_Enter"; break;
+
+        default: break;
+        }
+
+        //qDebug() << QString::number(event->key());
+
+        if(text == "Key_Enter") {
+            on_pushButton_add_clicked();
+        } else {
+            return;
+        }
+}
+
 void MainWindow::on_pushButton_add_clicked()
 {
     QTableWidgetItem *tableItem = new QTableWidgetItem();
-    QString mFilename = "C:/Test/git_test/JungWoo/pdkFileManagement/pdkFileManagement.txt";
+    QString mFilename = "C:/Git_Group_Server/JungWoo/pdkFileManagement/pdklist.txt";
 
     tableItem->setText(ui->lineEdit->text());
 
@@ -83,7 +102,6 @@ void MainWindow::on_pushButton_delete_clicked()
     QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
-
         QFile::remove("C:/Git_Group_Server/JungWoo/pdkFileManagement/pdklist.txt"); // file 삭제 코드
 
         for(int i = 0; i < ui->tableWidget->rowCount(); i++) {  // row 삭제 코드
@@ -92,8 +110,7 @@ void MainWindow::on_pushButton_delete_clicked()
 
             if (ui->tableWidget->rowCount() == 0) {     // 제대로 삭제 되었다면 row에는 0이 들어가기 때문에 row가 비어있으면 성공적으로 삭제되었다는 메시지 발생
                 QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
-            }
-            else {
+            } else {
                 QMessageBox::critical(this, "pdkFileManagement", "The deletion failed because an error occurred while deleting the txt file.");
                 return;
             }
@@ -107,13 +124,14 @@ void MainWindow::on_pushButton_delete_clicked()
 
 void MainWindow::on_pushButton_load_clicked()
 {
-    QFile mFile("pdkFileManagement.txt");
+    QFile mFile("pdklist.txt");
 
     if (!mFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        qDebug() << "read!!";
+        QMessageBox::critical(this, "pdkFileManagement", "Failed to load file because file does not exist. (Make sure that the file exists.)");
         return;
     }
+
     QTextStream in(&mFile);
 
     while( !in.atEnd() ) {
@@ -123,8 +141,6 @@ void MainWindow::on_pushButton_load_clicked()
         ui->tableWidget->insertRow(0);
         ui->tableWidget->setItem(0, 0, new QTableWidgetItem(line));
     }
-
-    QString mText = in.readAll();
 
     mFile.flush();
     mFile.close();
