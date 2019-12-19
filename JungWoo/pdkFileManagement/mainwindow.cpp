@@ -83,7 +83,10 @@ void MainWindow::on_pushButton_delete_clicked()
     QMessageBox::Yes | QMessageBox::No);
 
     if (reply == QMessageBox::Yes) {
+<<<<<<< HEAD
 
+=======
+>>>>>>> b0c559ad0ac23eda8df5c4550292eec68670c695
         QFile::remove("C:/Git_Group_Server/JungWoo/pdkFileManagement/pdklist.txt"); // file 삭제 코드
 
         for(int i = 0; i < ui->tableWidget->rowCount(); i++) {  // row 삭제 코드

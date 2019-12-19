@@ -78,6 +78,7 @@ release-uninstall: FORCE
 	$(MAKE) -f $(MAKEFILE).Release uninstall
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 Makefile: ..\..\Hyeonbin\loadCode\pdkFileManagement\pdkFileManagement.pro ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\spec_pre.prf \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\common\angle.conf \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\win32\windows_vulkan_sdk.prf \
@@ -428,6 +429,8 @@ Makefile: ..\..\Hyeonbin\loadCode\pdkFileManagement\pdkFileManagement.pro ..\..\
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\lib\Qt5Core.prl:
 ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\lib\qtmain.prl:
 =======
+=======
+>>>>>>> b0c559ad0ac23eda8df5c4550292eec68670c695
 Makefile: pdkFileManagement.pro ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\win32-msvc\qmake.conf ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\spec_pre.prf \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\common\angle.conf \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\features\win32\windows_vulkan_sdk.prf \
@@ -777,6 +780,9 @@ pdkFileManagement.pro:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\lib\Qt5Gui.prl:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\lib\Qt5Core.prl:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\lib\qtmain.prl:
+<<<<<<< HEAD
+>>>>>>> b0c559ad0ac23eda8df5c4550292eec68670c695
+=======
 >>>>>>> b0c559ad0ac23eda8df5c4550292eec68670c695
 qmake: FORCE
 	@$(QMAKE) -o Makefile ..\..\Hyeonbin\loadCode\pdkFileManagement\pdkFileManagement.pro -spec win32-msvc "CONFIG+=debug" "CONFIG+=qml_debug"
