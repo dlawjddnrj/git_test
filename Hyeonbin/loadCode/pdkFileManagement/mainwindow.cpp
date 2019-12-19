@@ -76,12 +76,27 @@ void MainWindow::on_pushButton_remove_clicked()
         QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
 
 
+
     }
 
     else {
         return;
     }
+
+    for(int i = 0; i < ui->tableWidget->rowCount(); i++) {  // row 삭제 코드
+        ui->tableWidget->setRowCount(0);
+        ui->tableWidget->removeRow(i);
+
+        if (ui->tableWidget->rowCount() == 0) {     // 제대로 삭제 되었다면 row에는 0이 들어가기 때문에 row가 비어있으면 성공적으로 삭제되었다는 메시지 발생
+            QMessageBox::information(this, "pdkFileManagement", "The file was deleted successfully!");
+        }
+        else {
+            QMessageBox::critical(this, "pdkFileManagement", "The deletion failed because an error occurred while deleting the txt file.");
+            return;
+        }
+    }
 }
+
 
 void MainWindow::on_pushButton_load_clicked()
 {
