@@ -1,12 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QFile>
-#include <QString>
-#include <QTextStream>
-#include <QDebug>
-#include <QMessageBox>
-#include <QModelIndex>
-#include <QDir>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
@@ -23,6 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_delete->setStyleSheet(removeStyle);
     ui->pushButton_quit->setStyleSheet(quitStyle);
 
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
+
+    timer->start();
+
     /* {        mainwindow의 배경화면 이미지 설정하는 코드. (이상해서 보완해야 함)
     QPixmap background(":/backgroundImage.png");
 
@@ -32,6 +30,22 @@ MainWindow::MainWindow(QWidget *parent) :
     setAutoFillBackground(true);
     setPalette(p);
     } */
+}
+
+void MainWindow::showTime()
+{
+    QTime time = QTime::currentTime();
+
+    QString time_text = time.toString("hh : mm : ss");
+    ui->label_nowTime->setText(time_text);
+
+    QDateTime stCurrentDateTime;
+    stCurrentDateTime = QDateTime::currentDateTimeUtc();
+
+    stCurrentDateTime = stCurrentDateTime.addSecs(9);
+
+    QString date_text = stCurrentDateTime.toString();
+//    ui->label_nowDate->setText(date_text);
 }
 
 MainWindow::~MainWindow()

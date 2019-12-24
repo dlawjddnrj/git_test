@@ -4,6 +4,15 @@
 #include <QLabel>
 #include <QMainWindow>
 #include <QKeyEvent>
+#include <QFile>
+#include <QString>
+#include <QTextStream>
+#include <QDebug>
+#include <QMessageBox>
+#include <QModelIndex>
+#include <QDir>
+#include <QTimer>
+#include <QDateTime>
 
 namespace Ui {
 class MainWindow;
@@ -20,12 +29,10 @@ public:
 private slots:
 
     void on_pushButton_add_clicked();
-
     void on_pushButton_quit_clicked();
-
     void on_pushButton_delete_clicked();
-
     void on_pushButton_load_clicked();
+    void showTime();
 
 private:
     Ui::MainWindow *ui;

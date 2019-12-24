@@ -13,7 +13,6 @@
 #include <QtGui/QIcon>
 #include <QtWidgets/QAction>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QDateEdit>
 #include <QtWidgets/QHBoxLayout>
 #include <QtWidgets/QHeaderView>
 #include <QtWidgets/QLabel>
@@ -43,7 +42,7 @@ public:
     QWidget *layoutWidget;
     QHBoxLayout *horizontalLayout;
     QLabel *label_nowDate;
-    QDateEdit *dateEdit;
+    QLabel *label_nowTime;
     QVBoxLayout *verticalLayout_2;
     QSpacerItem *verticalSpacer_Top;
     QLabel *label;
@@ -72,7 +71,7 @@ public:
         font.setPointSize(12);
         MainWindow->setFont(font);
         QIcon icon;
-        icon.addFile(QString::fromUtf8("managementIcon.png"), QSize(), QIcon::Normal, QIcon::Off);
+        icon.addFile(QString::fromUtf8("mangementIcon.png"), QSize(), QIcon::Normal, QIcon::Off);
         MainWindow->setWindowIcon(icon);
         MainWindow->setIconSize(QSize(20, 20));
         actionSave = new QAction(MainWindow);
@@ -90,7 +89,7 @@ public:
         pushButton_quit->setGeometry(QRect(850, 330, 141, 71));
         layoutWidget = new QWidget(centralWidget);
         layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        layoutWidget->setGeometry(QRect(0, 0, 850, 397));
+        layoutWidget->setGeometry(QRect(0, 0, 855, 396));
         horizontalLayout = new QHBoxLayout(layoutWidget);
         horizontalLayout->setSpacing(6);
         horizontalLayout->setContentsMargins(11, 11, 11, 11);
@@ -98,15 +97,20 @@ public:
         horizontalLayout->setContentsMargins(0, 0, 0, 0);
         label_nowDate = new QLabel(layoutWidget);
         label_nowDate->setObjectName(QString::fromUtf8("label_nowDate"));
-        label_nowDate->setStyleSheet(QString::fromUtf8("App->setStyleSheet(\"QLineEdit { background-color: yellow } \");"));
+        QFont font1;
+        font1.setPointSize(20);
+        font1.setBold(true);
+        font1.setWeight(75);
+        label_nowDate->setFont(font1);
 
         horizontalLayout->addWidget(label_nowDate);
 
-        dateEdit = new QDateEdit(layoutWidget);
-        dateEdit->setObjectName(QString::fromUtf8("dateEdit"));
-        dateEdit->setDateTime(QDateTime(QDate(2019, 12, 16), QTime(0, 0, 0)));
+        label_nowTime = new QLabel(layoutWidget);
+        label_nowTime->setObjectName(QString::fromUtf8("label_nowTime"));
+        label_nowTime->setFont(font1);
+        label_nowTime->setStyleSheet(QString::fromUtf8("App->setStyleSheet(\"QLineEdit { background-color: yellow } \");"));
 
-        horizontalLayout->addWidget(dateEdit);
+        horizontalLayout->addWidget(label_nowTime);
 
         verticalLayout_2 = new QVBoxLayout();
         verticalLayout_2->setSpacing(6);
@@ -117,10 +121,10 @@ public:
 
         label = new QLabel(layoutWidget);
         label->setObjectName(QString::fromUtf8("label"));
-        QFont font1;
-        font1.setFamily(QString::fromUtf8("\352\265\264\353\246\274"));
-        font1.setPointSize(14);
-        label->setFont(font1);
+        QFont font2;
+        font2.setFamily(QString::fromUtf8("\352\265\264\353\246\274"));
+        font2.setPointSize(14);
+        label->setFont(font2);
         label->setLayoutDirection(Qt::LeftToRight);
         label->setAlignment(Qt::AlignCenter);
 
@@ -146,15 +150,15 @@ public:
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
         tableWidget->setEnabled(true);
-        QFont font2;
-        font2.setFamily(QString::fromUtf8("Arial"));
-        font2.setPointSize(12);
-        font2.setBold(true);
-        font2.setUnderline(false);
-        font2.setWeight(75);
-        font2.setKerning(false);
-        font2.setStyleStrategy(QFont::PreferDefault);
-        tableWidget->setFont(font2);
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Arial"));
+        font3.setPointSize(12);
+        font3.setBold(true);
+        font3.setUnderline(false);
+        font3.setWeight(75);
+        font3.setKerning(false);
+        font3.setStyleStrategy(QFont::PreferDefault);
+        tableWidget->setFont(font3);
         tableWidget->setLayoutDirection(Qt::LeftToRight);
         tableWidget->setEditTriggers(QAbstractItemView::AnyKeyPressed|QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed);
         tableWidget->setRowCount(0);
@@ -225,7 +229,8 @@ public:
         sorry->setText(QApplication::translate("MainWindow", "Sorry ^o^", nullptr));
         actionExit->setText(QApplication::translate("MainWindow", "Exit", nullptr));
         pushButton_quit->setText(QApplication::translate("MainWindow", "Quit", nullptr));
-        label_nowDate->setText(QApplication::translate("MainWindow", "\355\230\204\354\236\254 \353\202\240\354\247\234 : ", nullptr));
+        label_nowDate->setText(QString());
+        label_nowTime->setText(QString());
         label->setText(QApplication::translate("MainWindow", "\354\225\204\353\236\230\354\227\220 \353\263\264\354\235\264\353\212\224 \354\271\270\354\227\220 PDK File\353\252\205\354\235\204 \354\236\205\353\240\245 \355\233\204 Add \353\262\204\355\212\274\354\235\204 \353\210\204\353\245\264\354\213\234\354\230\244.", nullptr));
         lineEdit->setText(QString());
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);

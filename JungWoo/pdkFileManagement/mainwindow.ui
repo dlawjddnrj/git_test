@@ -48,32 +48,39 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>850</width>
-      <height>397</height>
+      <width>855</width>
+      <height>396</height>
      </rect>
     </property>
     <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
       <widget class="QLabel" name="label_nowDate">
-       <property name="styleSheet">
-        <string notr="true">App-&gt;setStyleSheet(&quot;QLineEdit { background-color: yellow } &quot;);</string>
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
        </property>
        <property name="text">
-        <string>현재 날짜 : </string>
+        <string/>
        </property>
       </widget>
      </item>
      <item>
-      <widget class="QDateEdit" name="dateEdit">
-       <property name="dateTime">
-        <datetime>
-         <hour>0</hour>
-         <minute>0</minute>
-         <second>0</second>
-         <year>2019</year>
-         <month>12</month>
-         <day>16</day>
-        </datetime>
+      <widget class="QLabel" name="label_nowTime">
+       <property name="font">
+        <font>
+         <pointsize>20</pointsize>
+         <weight>75</weight>
+         <bold>true</bold>
+        </font>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">App-&gt;setStyleSheet(&quot;QLineEdit { background-color: yellow } &quot;);</string>
+       </property>
+       <property name="text">
+        <string/>
        </property>
       </widget>
      </item>
