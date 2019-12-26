@@ -1,11 +1,5 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
-#include <QFile>
-#include <QString>
-#include <QTextStream>
-#include <QDebug>
-#include <QMessageBox>
-#include <QModelIndex>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
@@ -22,6 +16,11 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->pushButton_delete->setStyleSheet(removeStyle);
     ui->pushButton_quit->setStyleSheet(quitStyle);
 
+    QTimer *timer = new QTimer(this);
+    connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
+
+    timer->start();
+
     /* {        mainwindow의 배경화면 이미지 설정하는 코드. (이상해서 보완해야 함)
     QPixmap background(":/backgroundImage.png");
 
@@ -31,6 +30,22 @@ MainWindow::MainWindow(QWidget *parent) :
     setAutoFillBackground(true);
     setPalette(p);
     } */
+}
+
+void MainWindow::showTime()
+{
+    QTime time = QTime::currentTime();
+
+    QString time_text = time.toString("hh : mm : ss");
+    ui->label_nowTime->setText(time_text);
+
+    QDateTime stCurrentDateTime;
+    stCurrentDateTime = QDateTime::currentDateTimeUtc();
+
+    stCurrentDateTime = stCurrentDateTime.addSecs(9);
+
+    QString date_text = stCurrentDateTime.toString();
+//    ui->label_nowDate->setText(date_text);
 }
 
 MainWindow::~MainWindow()
@@ -60,6 +75,11 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
 void MainWindow::on_pushButton_add_clicked()
 {
     QTableWidgetItem *tableItem = new QTableWidgetItem();
+
+    QString path = "C:/Git_Group_Server/JungWoo/pdkFileManagement";
+    QDir dir(path);
+    dir.mkpath(path);
+
     QString mFilename = "C:/Git_Group_Server/JungWoo/pdkFileManagement/pdklist.txt";
 
     tableItem->setText(ui->lineEdit->text());
@@ -76,7 +96,7 @@ void MainWindow::on_pushButton_add_clicked()
 
     if (!mFile.open(QFile::WriteOnly | QFile::Append | QFile::Text))
     {
-        qDebug() << "write!!";
+        QMessageBox::critical(this, "pdkFileManagement", "Input failed because file does not exist.");
         return;
     }
 
