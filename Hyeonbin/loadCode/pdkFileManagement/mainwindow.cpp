@@ -5,6 +5,7 @@
 #include <QTextStream>
 #include <QDebug>
 #include <QMessageBox>
+#include <QKeyEvent>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),        //  Qt::FramelessWindowHint를 parent, 옆에 쓰면 타이틀이 사라짐
@@ -25,6 +26,28 @@ MainWindow::MainWindow(QWidget *parent) :
 MainWindow::~MainWindow()
 {
     delete ui;
+}
+
+void MainWindow::keyPressEvent(QKeyEvent *event)
+{
+    QString text;
+    switch(event->key())
+    {
+    case Qt::Key_Enter: text ="Key_Enter";
+
+    break; case Qt::Key_ETH: text="Key_Enter";
+    break;
+
+    default: break;
+    }
+
+    //qDebug() << QString::number(event->key());
+
+    if(text == "Key_Enter") {
+        on_pushButton_add_clicked();
+    } else {
+        return;
+    }
 }
 
 void MainWindow::on_pushButton_add_clicked()
@@ -98,13 +121,14 @@ void MainWindow::on_pushButton_remove_clicked()
 }
 
 
+
 void MainWindow::on_pushButton_load_clicked()
 {
 
     QFile mFile("pdkFileManagement.txt");
     if (!mFile.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        qDebug() << "read!!";
+        QMessageBox::critical(this, "pdkFileManagement", "Failed to load file because file does not exist. (Make sure that the file exists.)");
         return;
     }
     QTextStream in(&mFile);

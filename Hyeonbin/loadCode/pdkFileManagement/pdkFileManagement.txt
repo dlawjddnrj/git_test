@@ -1,6 +1,2 @@
-aaa
-sss
-ddd
-fff
-ggg
-hhh
+q
+11

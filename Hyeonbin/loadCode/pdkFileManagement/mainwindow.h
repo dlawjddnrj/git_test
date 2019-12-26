@@ -31,6 +31,8 @@ private:
     Ui::MainWindow *ui;
     QTableWidgetItem *tableItem = new QTableWidgetItem();
 
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // MAINWINDOW_H

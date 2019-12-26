@@ -116,10 +116,6 @@ void MainWindow::on_pushButton_delete_clicked()
             }
         }
     }
-
-    else {
-        return;
-    }
 }
 
 void MainWindow::on_pushButton_load_clicked()

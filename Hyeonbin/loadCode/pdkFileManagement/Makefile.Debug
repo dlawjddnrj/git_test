@@ -619,7 +619,8 @@ debug\mainwindow.obj: mainwindow.cpp mainwindow.h \
 		C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug \
 		C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\QMessageBox \
 		C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qmessagebox.h \
-		C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qdialog.h
+		C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtWidgets\qdialog.h \
+		C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\QKeyEvent
 
 debug\moc_mainwindow.obj: debug\moc_mainwindow.cpp 
 
