@@ -21,7 +21,7 @@
   </property>
   <property name="windowIcon">
    <iconset>
-    <normaloff>mangementIcon.png</normaloff>mangementIcon.png</iconset>
+    <normaloff>managementIcon.ico</normaloff>managementIcon.ico</iconset>
   </property>
   <property name="iconSize">
    <size>

@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>MainWindow</string>
+   <string>bootingWorkingTime</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>image/timer.png</normaloff>image/timer.png</iconset>
   </property>
   <widget class="QWidget" name="centralWidget">
    <widget class="QLabel" name="nowTimeOut">

@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include <QtDebug>
+#include <QKeyEvent>
 
 namespace Ui {
 class Dialog;
@@ -43,6 +44,9 @@ private slots:
 
 private:
     Ui::Dialog *ui;
+
+protected:
+    void keyPressEvent(QKeyEvent *event);
 };
 
 #endif // DIALOG_H

@@ -11,7 +11,11 @@
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Calculator_JW</string>
+  </property>
+  <property name="windowIcon">
+   <iconset>
+    <normaloff>image/calculator.png</normaloff>image/calculator.png</iconset>
   </property>
   <property name="sizeGripEnabled">
    <bool>true</bool>

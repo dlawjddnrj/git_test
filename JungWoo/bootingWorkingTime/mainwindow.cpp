@@ -6,9 +6,12 @@ MainWindow::MainWindow(QWidget *parent) :
     ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    QSettings Settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
-    QString Path = QString("\"%1\"").arg(QCoreApplication::applicationFilePath().replace('/', '\\'));
-    Settings.setValue("bootingWorkingTime.pro", "C:/Git_Group_Server/JungWoo/bootingWorkingTime");
+
+    // 부팅시 자동으로 실행하는 코드 (작동되지 않아 주석처리)
+//    QSettings Settings("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Run", QSettings::NativeFormat);
+//    QString Path = QString("\"%1\"").arg(QCoreApplication::applicationFilePath().replace('/', '\\'));
+//    Settings.setValue("bootingWorkingTime.pro", "C:/Git_Group_Server/JungWoo/bootingWorkingTime");
+
     QTimer *timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(showTime()));
 

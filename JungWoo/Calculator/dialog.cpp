@@ -12,10 +12,10 @@ Dialog::~Dialog()
 {
     delete ui;
 }
-    // 텍스트 받아오는 방법
-    // 받아오고 전역변수로 저장.
-    // 두번째로 입력되는 값을 또 전역변수로 저장하고
-    // 그 두 값을 더하는 연산 후 다시 lineEdit에 출력.
+// 텍스트 받아오는 방법
+// 받아오고 전역변수로 저장.
+// 두번째로 입력되는 값을 또 전역변수로 저장하고
+// 그 두 값을 더하는 연산 후 다시 lineEdit에 출력.
 
 void Dialog::on_pushButton_num0_clicked()                       // pushButton_num0을 눌렀을때 호출되는 함수
 {
@@ -118,10 +118,10 @@ void Dialog::on_pushButton_clear_clicked()
 
 void Dialog::on_pushButton_plus_clicked()
 {   // first_add를 dialog.h에 class Dialog의 int first_add로 멤버변수를 선언해둠
-//    first_add = ui->lineEdit->text().toInt();       // first_add에 ui에 lineEdit에 있는 텍스트를 toInt로 통해 int형으로 형변환 시킨 상태로 저장
-//    on_pushButton_clear_clicked();
-//    second_add = ui->lineEdit->text().toInt();
-//    on_pushButton_clear_clicked();
+    //    first_add = ui->lineEdit->text().toInt();       // first_add에 ui에 lineEdit에 있는 텍스트를 toInt로 통해 int형으로 형변환 시킨 상태로 저장
+    //    on_pushButton_clear_clicked();
+    //    second_add = ui->lineEdit->text().toInt();
+    //    on_pushButton_clear_clicked();
     ui->label_operator->setText("+");
 }
 
@@ -165,7 +165,69 @@ void Dialog::on_pushButton_result_clicked()
             ui->lineEdit_result->setText(QString::number(first / second));
         }
     }
-//    ui->lineEdit->setText(ui->lineEdit->text() + result);
+    //    ui->lineEdit->setText(ui->lineEdit->text() + result);
+}
+
+void Dialog::keyPressEvent(QKeyEvent *event)
+{
+    QString text;
+
+    switch(event->key())
+    {
+    case Qt::Key_0: text = "Key_0"; break;
+    case Qt::Key_1: text = "Key_1"; break;
+    case Qt::Key_2: text = "Key_2"; break;
+    case Qt::Key_3: text = "Key_3"; break;
+    case Qt::Key_4: text = "Key_4"; break;
+    case Qt::Key_5: text = "Key_5"; break;
+    case Qt::Key_6: text = "Key_6"; break;
+    case Qt::Key_7: text = "Key_7"; break;
+    case Qt::Key_8: text = "Key_8"; break;
+    case Qt::Key_9: text = "Key_9"; break;
+
+    case Qt::Key_Plus: text = "Key_Plus"; break;
+    case Qt::Key_Minus: text = "Key_Minus"; break;
+    case Qt::Key_multiply: text = "Key_multiply"; break;
+    case Qt::Key_division: text = "Key_division"; break;
+
+    case Qt::Key_Enter: text = "Key_Enter"; break;
+    default: break;
+    }
+
+    if(text == "Key_0") {
+        qDebug() << "Key event !";
+        on_pushButton_num0_clicked();
+    } else if (text == "Key_1") {
+        on_pushButton_num1_clicked();
+    } else if (text == "Key_2") {
+        on_pushButton_num2_clicked();
+    } else if (text == "Key_3") {
+        on_pushButton_num3_clicked();
+    } else if (text == "Key_4") {
+        on_pushButton_num4_clicked();
+    } else if (text == "Key_5") {
+        on_pushButton_num5_clicked();
+    } else if (text == "Key_6") {
+        on_pushButton_num6_clicked();
+    } else if (text == "Key_7") {
+        on_pushButton_num7_clicked();
+    } else if (text == "Key_8") {
+        on_pushButton_num8_clicked();
+    } else if (text == "Key_9") {
+        on_pushButton_num9_clicked();
+    } else if (text == "Key_Plus") {
+        on_pushButton_plus_clicked();
+    } else if (text == "Key_Minus") {
+        on_pushButton_miuns_clicked();
+    } else if (text == "Key_multiply") {
+        on_pushButton_mul_clicked();
+    } else if (text == "Key_division") {
+        on_pushButton_div_clicked();
+    } else if (text == "Key_Enter") {
+        on_pushButton_result_clicked();
+    } else {
+        return;
+    }
 }
 
 // 프로젝트 만들고 클래스를 두개로 나누기

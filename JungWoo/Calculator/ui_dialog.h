@@ -10,8 +10,8 @@
 #define UI_DIALOG_H
 
 #include <QtCore/QVariant>
+#include <QtGui/QIcon>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QDateTimeEdit>
 #include <QtWidgets/QDialog>
 #include <QtWidgets/QLabel>
 #include <QtWidgets/QLineEdit>
@@ -41,7 +41,6 @@ public:
     QLabel *label_operator;
     QLineEdit *lineEdit_first;
     QLineEdit *lineEdit_second;
-    QDateTimeEdit *dateTimeEdit;
     QPushButton *pushButton_mul;
     QPushButton *pushButton_div;
 
@@ -50,6 +49,9 @@ public:
         if (Dialog->objectName().isEmpty())
             Dialog->setObjectName(QString::fromUtf8("Dialog"));
         Dialog->resize(513, 313);
+        QIcon icon;
+        icon.addFile(QString::fromUtf8("image/calculator.png"), QSize(), QIcon::Normal, QIcon::Off);
+        Dialog->setWindowIcon(icon);
         Dialog->setSizeGripEnabled(true);
         Dialog->setModal(false);
         pushButton_num0 = new QPushButton(Dialog);
@@ -155,10 +157,6 @@ public:
         lineEdit_second->setGeometry(QRect(150, 60, 91, 21));
         lineEdit_second->setFont(font4);
         lineEdit_second->setAlignment(Qt::AlignCenter);
-        dateTimeEdit = new QDateTimeEdit(Dialog);
-        dateTimeEdit->setObjectName(QString::fromUtf8("dateTimeEdit"));
-        dateTimeEdit->setGeometry(QRect(20, 10, 194, 22));
-        dateTimeEdit->setAlignment(Qt::AlignBottom|Qt::AlignHCenter);
         pushButton_mul = new QPushButton(Dialog);
         pushButton_mul->setObjectName(QString::fromUtf8("pushButton_mul"));
         pushButton_mul->setGeometry(QRect(430, 150, 51, 71));
@@ -179,7 +177,7 @@ public:
 
     void retranslateUi(QDialog *Dialog)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", nullptr));
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "Calculator_JW", nullptr));
         pushButton_num0->setText(QApplication::translate("Dialog", "0", nullptr));
         pushButton_num2->setText(QApplication::translate("Dialog", "2", nullptr));
         pushButton_num1->setText(QApplication::translate("Dialog", "1", nullptr));
