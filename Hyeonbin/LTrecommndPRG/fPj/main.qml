@@ -103,12 +103,6 @@ Window {
             id: id_num
             property int setNumber : 0
 
-//            Component
-//            {
-//             id: setMynumber
-
-//            }
-
         }
 
 
