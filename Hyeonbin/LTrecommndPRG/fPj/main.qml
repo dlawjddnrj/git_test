@@ -39,7 +39,9 @@ Window {
                 x: 0
                 y: 60
                 color: "white"
-                text: a    //c++에서 처리된 값을 가져오는 부분
+                text: a
+
+                //c++에서 처리된 값을 가져오는 부분
             }
 
             TextArea{
@@ -50,7 +52,9 @@ Window {
                 x: 0
                 y: 103
                 color: "white"
-                text: b    //c++에서 처리된 값을 가져오는 부분
+                text: b
+
+                //c++에서 처리된 값을 가져오는 부분
             }
 
             TextArea{
@@ -97,30 +101,67 @@ Window {
                 text: f    //c++에서 처리된 값을 가져오는 부분
 
             }
+
+            Rectangle {
+                x: 50
+                y: 0
+                width: 47
+                height: 40
+                objectName: "rect1"
+                TextEdit {
+                    id: te1
+                    x: 0
+                    y: 8
+                    width: 47
+                    height: 40
+                    color: "#000000"
+                    text: "1"
+                    font.family: "Arial"
+                    font.weight: Font.Normal
+                    focus: true
+                    font.pointSize: 10
+                    objectName: "rect1_text"
+                }
+            }
+
+            Rectangle {
+                x: 100
+                y: 0
+                width: 47
+                height: 40
+                TextEdit {
+                    id: te2
+                    x: 0
+                    y: 8
+                    width: 47
+                    height: 40
+                    color: "#000000"
+                    text: "input"
+                    font.family: "Arial"
+                    font.weight: Font.Normal
+                    focus: true
+                    font.pointSize: 10
+                }
+            }
         }
 
         Item {
             id: id_num
             property int setNumber : 0
 
-//            Component
-//            {
-//             id: setMynumber
+            //            Component
+            //            {
+            //             id: setMynumber
 
-//            }
+            //            }
 
         }
-
-
-
         Button{
-
             BusyIndicator {
                 id: busyIndicator
                 x: 290
                 y: 396
             }
-
             text:{
                 qsTr("Click")
             }
@@ -134,8 +175,79 @@ Window {
             }//signal 발생부분
         }
 
+        Rectangle {
+            x: 0
+            y: 0
+            width: 47
+            height: 40
+            TextEdit {
+                id: te
+                x: 0
+                y: 8
+                width: 47
+                height: 40
+                text: "input"
+                font.weight: Font.Normal
+                font.pointSize: 10
+                color: "black"
+                focus: true
+            }
+        }
+        Rectangle {
+            x: 151
+            y: 0
+            width: 47
+            height: 40
+            TextEdit {
+                id: te3
+                x: 0
+                y: 8
+                width: 47
+                height: 40
+                color: "#000000"
+                text: "input"
+                font.weight: Font.Normal
+                focus: true
+                font.pointSize: 10
+            }
+        }
+
+        Rectangle {
+            x: 201
+            y: 0
+            width: 47
+            height: 40
+            TextEdit {
+                id: te4
+                x: 0
+                y: 8
+                width: 47
+                height: 40
+                color: "#000000"
+                text: "input"
+                font.weight: Font.Normal
+                focus: true
+                font.pointSize: 10
+            }
+        }
+
+        Rectangle {
+            x: 252
+            y: 0
+            width: 47
+            height: 40
+            TextEdit {
+                id: te5
+                x: 0
+                y: 8
+                width: 47
+                height: 40
+                color: "#000000"
+                text: "input"
+                font.weight: Font.Normal
+                focus: true
+                font.pointSize: 10
+            }
+        }
     }
-
-
-
 }
