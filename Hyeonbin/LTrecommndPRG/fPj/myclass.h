@@ -10,6 +10,7 @@ class myClass : public QObject
 public:
     myClass(QObject* obj);
     QObject* m_obj;
+    ~myClass();
 
 public slots:
     void onButtonClicked(QVariant var);

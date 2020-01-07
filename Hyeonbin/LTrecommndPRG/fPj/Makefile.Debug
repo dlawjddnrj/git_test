@@ -218,6 +218,21 @@ debug\moc_jungwoo.cpp: jungwoo.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qobject_impl.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qmap.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qdebug.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qhash.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qtextstream.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qiodevice.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qlocale.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qshareddata.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qvector.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qpoint.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qset.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qcontiguouscache.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qsharedpointer.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
 		debug\moc_predefs.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe
 	C:\Qt\Qt5.12.4\5.12.4\msvc2017_64\bin\moc.exe $(DEFINES) --compiler-flavor=msvc --include C:/Git_Group_Server/Hyeonbin/LTrecommndPRG/fPj/debug/moc_predefs.h -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/mkspecs/win32-msvc -IC:/Git_Group_Server/Hyeonbin/LTrecommndPRG/fPj -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtQuick -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtGui -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtANGLE -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtQml -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtNetwork -IC:/Qt/Qt5.12.4/5.12.4/msvc2017_64/include/QtCore -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\ATLMFC\include" -I"C:\Program Files (x86)\Microsoft Visual Studio\2017\Community\VC\Tools\MSVC\14.16.27023\include" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt" -I"C:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt" jungwoo.h -o debug\moc_jungwoo.cpp
@@ -359,21 +374,22 @@ debug\jungwoo.obj: jungwoo.cpp jungwoo.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qvarlengtharray.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qcontainerfwd.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qobject_impl.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QVariant \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qvariant.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qmap.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qdebug.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qhash.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qmap.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qtextstream.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qiodevice.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qlocale.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qvariant.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qshareddata.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qvector.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qpoint.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qset.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qcontiguouscache.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qsharedpointer.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qsharedpointer_impl.h
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug
 
 debug\main.obj: main.cpp ..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\QGuiApplication \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtGui\qguiapplication.h \
@@ -538,7 +554,8 @@ debug\myclass.obj: myclass.cpp myclass.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qcontiguouscache.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qsharedpointer.h \
 		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\qsharedpointer_impl.h \
-		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug
+		..\..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\include\QtCore\QDebug \
+		jungwoo.h
 
 debug\qrc_qml.obj: debug\qrc_qml.cpp 
 

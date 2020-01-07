@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_jungwoo_t {
-    QByteArrayData data[3];
-    char stringdata0[26];
+    QByteArrayData data[4];
+    char stringdata0[35];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,11 +32,12 @@ struct qt_meta_stringdata_jungwoo_t {
 static const qt_meta_stringdata_jungwoo_t qt_meta_stringdata_jungwoo = {
     {
 QT_MOC_LITERAL(0, 0, 7), // "jungwoo"
-QT_MOC_LITERAL(1, 8, 16), // "inputLottoNumber"
-QT_MOC_LITERAL(2, 25, 0) // ""
+QT_MOC_LITERAL(1, 8, 18), // "return_randomvalue"
+QT_MOC_LITERAL(2, 27, 0), // ""
+QT_MOC_LITERAL(3, 28, 6) // "random"
 
     },
-    "jungwoo\0inputLottoNumber\0"
+    "jungwoo\0return_randomvalue\0\0random"
 };
 #undef QT_MOC_LITERAL
 
@@ -54,10 +55,10 @@ static const uint qt_meta_data_jungwoo[] = {
        0,       // signalCount
 
  // slots: name, argc, parameters, tag, flags
-       1,    0,   19,    2, 0x0a /* Public */,
+       1,    1,   19,    2, 0x0a /* Public */,
 
  // slots: parameters
-    QMetaType::Void,
+    QMetaType::QVariant, QMetaType::QVariant,    3,
 
        0        // eod
 };
@@ -68,11 +69,11 @@ void jungwoo::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         auto *_t = static_cast<jungwoo *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->inputLottoNumber(); break;
+        case 0: { QVariant _r = _t->return_randomvalue((*reinterpret_cast< QVariant(*)>(_a[1])));
+            if (_a[0]) *reinterpret_cast< QVariant*>(_a[0]) = std::move(_r); }  break;
         default: ;
         }
     }
-    Q_UNUSED(_a);
 }
 
 QT_INIT_METAOBJECT const QMetaObject jungwoo::staticMetaObject = { {

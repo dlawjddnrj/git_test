@@ -24,13 +24,13 @@ int main(int argc, char *argv[])
     QObject* qml = engine.rootObjects().first();
 
     myClass mc(qml);
-    jungwoo jg(qml);
+    jungwoo jw(qml);
 
     // by jungwoo
-    QObject::connect(qml, SIGNAL(userInput(QVariant)), &jg, SLOT(inputLottoNumber(QVariant)));
+    QObject::connect(qml, SIGNAL(userQMLInput(QVariant)), &jw, SLOT(return_randomvalue(QVariant)));
 
-    QObject *rect = qml->findChild<QObject*>("rect1");
-    qDebug() << rect->findChild<QObject*>("rect1_text")->property("text");
+//    QObject *rect = qml->findChild<QObject*>("rect1");
+//    qDebug() << rect->findChild<QObject*>("rect1_text")->property("text");
 
     // end
 

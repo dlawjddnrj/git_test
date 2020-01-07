@@ -8,11 +8,12 @@ class jungwoo : public QObject {
     Q_OBJECT
 public:
     jungwoo(QObject *JW);
-    QObject* lim;
+    static QObject* lim;
     ~jungwoo();
 
 public slots:
-    void inputLottoNumber();
+//    void inputLottoNumber(QVariant num);
+    static QVariant return_randomvalue(QVariant random);
 };
 
 #endif // JUNGWOO_H

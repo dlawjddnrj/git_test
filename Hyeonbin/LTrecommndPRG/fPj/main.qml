@@ -10,7 +10,7 @@ Window {
     title: qsTr("Lotto Recommend Number")
 
     signal buttonClicked(var a)
-    signal userInput(var u)
+    signal userQMLInput(var text)
 
     property int a
     property int b
@@ -129,7 +129,7 @@ Window {
                     buttonClicked(id_num.setNumber)
 
 
-                    userInput(textin_1.text)
+                    userQMLInput(textin_1.text)
                     console.log("success")
                     bgm_Play.play()
                 }//signal 발생부분
@@ -145,6 +145,7 @@ Window {
                 height: 40
                 TextEdit {
                     id: textin_1
+                    objectName: "123"
                     x: 0
                     y: 8
                     width: 47
