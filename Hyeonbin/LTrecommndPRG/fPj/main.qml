@@ -121,7 +121,8 @@ Window {
 
             SoundEffect{
                 id: bgm_Play
-                source: ""//추가예정
+                source: "source/BGM.wav"//추가예정
+
             }
 
             DelayButton{
@@ -133,13 +134,15 @@ Window {
                 x: 100
                 y: 314
                 onPressed: {
+                    action : false
                     bgm_Play.play()
-                }
-                onClicked: {
                     buttonClicked(id_num.setNumber)
+                }//bgm 재생 관련 부분
+                onReleased: {
+
                     console.log("success")
                 }//signal 발생부분
-                //bgm 재생 관련 부분
+
             }
 
             Rectangle {
@@ -153,7 +156,8 @@ Window {
                     y: 8
                     width: 47
                     height: 40
-                    text: "input"
+                    overwriteMode: true
+                    text: ""
                     font.weight: Font.Normal
                     font.pointSize: 10
                     font.family: "Arial"
@@ -174,8 +178,9 @@ Window {
                     y: 8
                     width: 47
                     height: 40
+                    overwriteMode: true
                     color: "black"
-                    text: "1"
+                    text: ""
                     font.family: "Arial"
                     font.weight: Font.Normal
                     focus: true
@@ -195,8 +200,9 @@ Window {
                     y: 8
                     width: 47
                     height: 40
+                    overwriteMode: true
                     color: "#000000"
-                    text: "input"
+                    text: ""
                     font.family: "Arial"
                     font.weight: Font.Normal
                     focus: true
@@ -217,8 +223,9 @@ Window {
                     y: 8
                     width: 47
                     height: 40
+                    overwriteMode: true
                     color: "#000000"
-                    text: "input"
+                    text: ""
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
@@ -236,8 +243,9 @@ Window {
                     y: 8
                     width: 47
                     height: 40
+                    overwriteMode: true
                     color: "#000000"
-                    text: "input"
+                    text: ""
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
@@ -255,8 +263,9 @@ Window {
                     y: 8
                     width: 47
                     height: 40
+                    overwriteMode: true
                     color: "#000000"
-                    text: "input"
+                    text: ""
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
