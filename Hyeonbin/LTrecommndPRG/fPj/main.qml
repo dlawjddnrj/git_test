@@ -9,6 +9,7 @@ Window {
     title: qsTr("Lotto Recommend Number")
 
     signal buttonClicked(var a)
+    signal userInput(var u)
 
     property int a
     property int b
@@ -40,7 +41,6 @@ Window {
                 y: 60
                 color: "white"
                 text: a
-
                 //c++에서 처리된 값을 가져오는 부분
             }
 
@@ -108,13 +108,6 @@ Window {
                 id: id_num
                 property int setNumber : 0
 
-                //            Component
-                //            {
-                //             id: setMynumber
-
-                //            }
-
-
             }
             Button{
                 BusyIndicator {
@@ -131,25 +124,29 @@ Window {
                 onClicked: {
                     busyIndicator.running = true
                     buttonClicked(id_num.setNumber)
+
+
+                    userInput(textin_1.text)
                     console.log("success")
                 }//signal 발생부분
             }
 
+
+            // by jungwoo
             Rectangle {
                 x: 0
                 y: 0
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te
+                    id: textin_1
                     x: 0
                     y: 8
                     width: 47
                     height: 40
-                    text: "input"
+                    text: "1"
                     font.weight: Font.Normal
                     font.pointSize: 10
-                    font.family: "Arial"
                     color: "black"
                     focus: true
                 }
@@ -162,14 +159,13 @@ Window {
                 height: 40
                 objectName: "rect1"
                 TextEdit {
-                    id: te1
+                    id: textin_2
                     x: 0
                     y: 8
                     width: 47
                     height: 40
                     color: "black"
-                    text: "1"
-                    font.family: "Arial"
+                    text: "2"
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
@@ -183,14 +179,13 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te2
+                    id: textin_3
                     x: 0
                     y: 8
                     width: 47
                     height: 40
                     color: "#000000"
-                    text: "input"
-                    font.family: "Arial"
+                    text: "3"
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
@@ -205,13 +200,13 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te3
+                    id: textin_4
                     x: 0
                     y: 8
                     width: 47
                     height: 40
                     color: "#000000"
-                    text: "input"
+                    text: "4"
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
@@ -224,13 +219,13 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te4
+                    id: textin_5
                     x: 0
                     y: 8
                     width: 47
                     height: 40
                     color: "#000000"
-                    text: "input"
+                    text: "5"
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
@@ -243,18 +238,19 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te5
+                    id: textin_6
                     x: 0
                     y: 8
                     width: 47
                     height: 40
                     color: "#000000"
-                    text: "input"
+                    text: "6"
                     font.weight: Font.Normal
                     focus: true
                     font.pointSize: 10
                 }
             }
+            // end
         }
     }
 }
