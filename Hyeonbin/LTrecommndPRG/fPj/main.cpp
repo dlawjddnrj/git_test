@@ -1,7 +1,9 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
 #include "myclass.h"
+#include "jungwoo.h"
 #include <qdebug.h>
+
 int main(int argc, char *argv[])
 {
     QCoreApplication::setAttribute(Qt::AA_EnableHighDpiScaling);
@@ -9,8 +11,6 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-
-
 
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
@@ -21,24 +21,23 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
     engine.load(url);
 
-
-
-    QObject* qml =  engine.rootObjects().first();
+    QObject* qml = engine.rootObjects().first();
 
     myClass mc(qml);
+    jungwoo jw(qml);
 
-    QObject *rect = qml->findChild<QObject*>("rect1");
-    qDebug() << rect->findChild<QObject*>("rect1_text")->property("text");
+    // by jungwoo
+    QObject::connect(qml, SIGNAL(userQMLInput(QVariant)), &jw, SLOT(return_randomvalue(QVariant)));
 
+//    QObject *rect = qml->findChild<QObject*>("rect1");
+//    qDebug() << rect->findChild<QObject*>("rect1_text")->property("text");
+
+    // end
 
     bool typeconnection = QObject::connect(engine.rootObjects().first(), SIGNAL(buttonClicked(QVariant)) ,
                                            &mc, SLOT(onButtonClicked(QVariant)));
 
-
     qDebug() << typeconnection ;
-
-
-
 
     return app.exec();
 }

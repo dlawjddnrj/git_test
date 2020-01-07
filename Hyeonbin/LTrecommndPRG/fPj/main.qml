@@ -10,6 +10,7 @@ Window {
     title: qsTr("Lotto Recommend Number")
 
     signal buttonClicked(var a)
+    signal userQMLInput(var text)
 
     property int a
     property int b
@@ -42,7 +43,6 @@ Window {
                 y: 60
                 color: "white"
                 text: a
-
                 //c++에서 처리된 값을 가져오는 부분
             }
 
@@ -110,13 +110,6 @@ Window {
                 id: id_num
                 property int setNumber : 0
 
-                //            Component
-                //            {
-                //             id: setMynumber
-
-                //            }
-
-
             }
 
             SoundEffect{
@@ -137,21 +130,26 @@ Window {
                     action : false
                     bgm_Play.play()
                     buttonClicked(id_num.setNumber)
+
                 }//bgm 재생 관련 부분
                 onReleased: {
+
 
                     console.log("success")
                 }//signal 발생부분
 
             }
 
+
+            // by jungwoo
             Rectangle {
                 x: 0
                 y: 0
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te
+                    id: textin_1
+                    objectName: "123"
                     x: 0
                     y: 8
                     width: 47
@@ -160,7 +158,6 @@ Window {
                     text: ""
                     font.weight: Font.Normal
                     font.pointSize: 10
-                    font.family: "Arial"
                     color: "black"
                     focus: true
                 }
@@ -173,7 +170,7 @@ Window {
                 height: 40
                 objectName: "rect1"
                 TextEdit {
-                    id: te1
+                    id: textin_2
                     x: 0
                     y: 8
                     width: 47
@@ -195,7 +192,7 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te2
+                    id: textin_3
                     x: 0
                     y: 8
                     width: 47
@@ -218,7 +215,7 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te3
+                    id: textin_4
                     x: 0
                     y: 8
                     width: 47
@@ -238,7 +235,7 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te4
+                    id: textin_5
                     x: 0
                     y: 8
                     width: 47
@@ -258,7 +255,7 @@ Window {
                 width: 47
                 height: 40
                 TextEdit {
-                    id: te5
+                    id: textin_6
                     x: 0
                     y: 8
                     width: 47
@@ -271,6 +268,7 @@ Window {
                     font.pointSize: 10
                 }
             }
+            // end
         }
     }
 }
