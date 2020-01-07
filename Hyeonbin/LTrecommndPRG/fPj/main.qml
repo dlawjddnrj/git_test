@@ -102,6 +102,59 @@ Window {
 
             }
 
+
+
+            Item {
+                id: id_num
+                property int setNumber : 0
+
+                //            Component
+                //            {
+                //             id: setMynumber
+
+                //            }
+
+
+            }
+            Button{
+                BusyIndicator {
+                    id: busyIndicator
+                    x: 290
+                    y: 396
+                }
+                text:{
+                    qsTr("Click")
+                }
+                id: buttonStart
+                x: 100
+                y: 314
+                onClicked: {
+                    busyIndicator.running = true
+                    buttonClicked(id_num.setNumber)
+                    console.log("success")
+                }//signal 발생부분
+            }
+
+            Rectangle {
+                x: 0
+                y: 0
+                width: 47
+                height: 40
+                TextEdit {
+                    id: te
+                    x: 0
+                    y: 8
+                    width: 47
+                    height: 40
+                    text: "input"
+                    font.weight: Font.Normal
+                    font.pointSize: 10
+                    font.family: "Arial"
+                    color: "black"
+                    focus: true
+                }
+            }
+
             Rectangle {
                 x: 50
                 y: 0
@@ -114,7 +167,7 @@ Window {
                     y: 8
                     width: 47
                     height: 40
-                    color: "#000000"
+                    color: "black"
                     text: "1"
                     font.family: "Arial"
                     font.weight: Font.Normal
@@ -143,113 +196,64 @@ Window {
                     font.pointSize: 10
                 }
             }
-        }
 
-        Item {
-            id: id_num
-            property int setNumber : 0
 
-<<<<<<< HEAD
-=======
-            //            Component
-            //            {
-            //             id: setMynumber
 
-            //            }
-
->>>>>>> ec4f1a1eb966082bd415a2cc33c2cd55f005985f
-        }
-        Button{
-            BusyIndicator {
-                id: busyIndicator
-                x: 290
-                y: 396
-            }
-            text:{
-                qsTr("Click")
-            }
-            id: buttonStart
-            x: 100
-            y: 314
-            onClicked: {
-                busyIndicator.running = true
-                buttonClicked(id_num.setNumber)
-                console.log("success")
-            }//signal 발생부분
-        }
-
-        Rectangle {
-            x: 0
-            y: 0
-            width: 47
-            height: 40
-            TextEdit {
-                id: te
-                x: 0
-                y: 8
+            Rectangle {
+                x: 151
+                y: 0
                 width: 47
                 height: 40
-                text: "input"
-                font.weight: Font.Normal
-                font.pointSize: 10
-                color: "black"
-                focus: true
+                TextEdit {
+                    id: te3
+                    x: 0
+                    y: 8
+                    width: 47
+                    height: 40
+                    color: "#000000"
+                    text: "input"
+                    font.weight: Font.Normal
+                    focus: true
+                    font.pointSize: 10
+                }
             }
-        }
-        Rectangle {
-            x: 151
-            y: 0
-            width: 47
-            height: 40
-            TextEdit {
-                id: te3
-                x: 0
-                y: 8
-                width: 47
-                height: 40
-                color: "#000000"
-                text: "input"
-                font.weight: Font.Normal
-                focus: true
-                font.pointSize: 10
-            }
-        }
 
-        Rectangle {
-            x: 201
-            y: 0
-            width: 47
-            height: 40
-            TextEdit {
-                id: te4
-                x: 0
-                y: 8
+            Rectangle {
+                x: 201
+                y: 0
                 width: 47
                 height: 40
-                color: "#000000"
-                text: "input"
-                font.weight: Font.Normal
-                focus: true
-                font.pointSize: 10
+                TextEdit {
+                    id: te4
+                    x: 0
+                    y: 8
+                    width: 47
+                    height: 40
+                    color: "#000000"
+                    text: "input"
+                    font.weight: Font.Normal
+                    focus: true
+                    font.pointSize: 10
+                }
             }
-        }
 
-        Rectangle {
-            x: 252
-            y: 0
-            width: 47
-            height: 40
-            TextEdit {
-                id: te5
-                x: 0
-                y: 8
+            Rectangle {
+                x: 252
+                y: 0
                 width: 47
                 height: 40
-                color: "#000000"
-                text: "input"
-                font.weight: Font.Normal
-                focus: true
-                font.pointSize: 10
+                TextEdit {
+                    id: te5
+                    x: 0
+                    y: 8
+                    width: 47
+                    height: 40
+                    color: "#000000"
+                    text: "input"
+                    font.weight: Font.Normal
+                    focus: true
+                    font.pointSize: 10
+                }
             }
         }
     }
