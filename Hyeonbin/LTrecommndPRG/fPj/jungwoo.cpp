@@ -12,7 +12,7 @@ jungwoo::~jungwoo() {
 
 QVariant jungwoo::return_randomvalue(QVariant random)
 {
-    // 값을 읽어올 순 있으나 형변환 후 if문을 사용하여 textEdit에 있는 tex와 같은지 비교 후
+    // 값을 읽어올 순 있으나 형변환 후 if문을 사용하여 textEdit에 있는 text와 같은지 비교 후
     // 같으면 다시 onButtonClicked에 있는 for문을 실행하고 싶다.
     // 그럴려면 onButtonClicked에 있는 for문을 다른 함수로 만들어야 한다.
 
