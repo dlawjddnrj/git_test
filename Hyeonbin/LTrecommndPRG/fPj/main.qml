@@ -1,6 +1,7 @@
 import QtQuick 2.12
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.5
+import QtMultimedia 5.12
 
 Window {
     visible: true
@@ -17,6 +18,7 @@ Window {
     property int d
     property int e
     property int f
+
 
 
     Rectangle{
@@ -109,26 +111,29 @@ Window {
                 property int setNumber : 0
 
             }
-            Button{
-                BusyIndicator {
-                    id: busyIndicator
-                    x: 290
-                    y: 396
-                }
+
+            SoundEffect{
+                id: bgm_Play
+                source: ""//추가예정
+            }
+
+            DelayButton{
                 text:{
                     qsTr("Click")
                 }
+                delay: 5000
                 id: buttonStart
                 x: 100
                 y: 314
                 onClicked: {
-                    busyIndicator.running = true
                     buttonClicked(id_num.setNumber)
 
 
                     userInput(textin_1.text)
                     console.log("success")
+                    bgm_Play.play()
                 }//signal 발생부분
+                //bgm 재생 관련 부분
             }
 
 
