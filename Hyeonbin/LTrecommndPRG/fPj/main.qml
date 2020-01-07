@@ -132,10 +132,12 @@ Window {
                 id: buttonStart
                 x: 100
                 y: 314
+                onPressed: {
+                    bgm_Play.play()
+                }
                 onClicked: {
                     buttonClicked(id_num.setNumber)
                     console.log("success")
-                    bgm_Play.play()
                 }//signal 발생부분
                 //bgm 재생 관련 부분
             }
