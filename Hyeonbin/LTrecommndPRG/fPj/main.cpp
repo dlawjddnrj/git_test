@@ -26,6 +26,11 @@ int main(int argc, char *argv[])
     QObject* qml =  engine.rootObjects().first();
 
     myClass mc(qml);
+
+    QObject *rect = qml->findChild<QObject*>("rect1");
+    qDebug() << rect->findChild<QObject*>("rect1_text")->property("text");
+
+
     bool typeconnection = QObject::connect(engine.rootObjects().first(), SIGNAL(buttonClicked(QVariant)) ,
                                            &mc, SLOT(onButtonClicked(QVariant)));
 
