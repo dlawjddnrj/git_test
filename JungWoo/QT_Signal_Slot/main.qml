@@ -10,11 +10,11 @@ Window {
 
     signal qmlSignal(var a)
 
-    property int a
+    property string a
 
     Item {
         id: itemId
-        property int good: 100
+        property string name: "Hello~"
     }
 
     Rectangle {
@@ -29,7 +29,6 @@ Window {
             height: 200
             color: "white"
             text: a
-
         }
     }
 
@@ -45,7 +44,7 @@ Window {
             x: 50
             y: 80
             onClicked: {
-                qmlSignal(itemId.good)
+                qmlSignal(itemId.name)
             }
         }
     }

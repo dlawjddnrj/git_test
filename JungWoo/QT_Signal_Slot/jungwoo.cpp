@@ -9,7 +9,9 @@ jungwoo::jungwoo(QObject* obj) : jw_(obj)
 }
 
 void jungwoo::cppSlots(QVariant var)
-{
+{   
+    string str[] = {"a"};
+//    jw_->setProperty(str[0].c_str(), QVariant(var));
     qDebug() << var;
     int temp = var.canConvert<int>() ? var.toInt() + 1 : +0;
     qDebug() << temp;
@@ -34,27 +36,42 @@ void jungwoo::cppSlots(QVariant var)
 
     if(iter != mapJungWoo.end()) {
         qDebug() << "Key 5 Value : " << iter.value();
+//        jw_->setProperty(str[0].c_str(), QVariant(iter.value()));
         iter = mapJungWoo.find(20);
     }
 
     if(iter != mapJungWoo.end()) {
         qDebug() << "Key 20 Value : " << iter.value();
+        jw_->setProperty(str[0].c_str(), QVariant(iter.value()));
     }
 
-    for(iter = mapJungWoo.begin(); iter != mapJungWoo.end(); iter++) {
-        qDebug() << "Key : " << iter.key() << " " << "Value : " << iter.value();
-    }
+    qDebug() << mapJungWoo;
 
     QSet<int> setJungWoo;
 
     setJungWoo.insert(10);
+    setJungWoo.insert(20);
+    setJungWoo.insert(30);
+    setJungWoo.insert(40);
     setJungWoo.insert(50);
+    setJungWoo.insert(60);
+    setJungWoo.insert(25);
+    setJungWoo.insert(15);
 
+    QSet<int>::iterator iter_;
 
-    QSet<int> :: iterator setIter;
+    for(iter_ = setJungWoo.begin(); iter_ != setJungWoo.end(); iter_++) {
+        qDebug() << *iter_;
+    }
 
+    qDebug() << setJungWoo;
 
+    if(setJungWoo.contains(20)) {
+        qDebug() << "Find set value 20!";
+    }
 
-
-
+//    while(i != setJungWoo.constEnd()) {
+//        qDebug() << "is QSet All Value" << *i;
+//        ++i;
+//    }
 }
