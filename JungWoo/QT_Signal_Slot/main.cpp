@@ -1,6 +1,6 @@
 #include <QGuiApplication>
 #include <QQmlApplicationEngine>
-#include "connect.h"
+#include "jungwoo.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,21 +9,20 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
-
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
         if (!obj && url == objUrl)
             QCoreApplication::exit(-1);
-
     }, Qt::QueuedConnection);
     engine.load(url);
 
-    QObject* qml = engine.rootObjects().first();
+    QObject* engine_qml = engine.rootObjects().first();
 
-    connect jw(qml);
+    jungwoo jw(engine_qml);
 
-    QObject::connect(qml, SIGNAL(qmlSignal(QVariant)), &jw, SLOT(cppFunc(QVariant)));
+    QObject::connect(engine.rootObjects().first(), SIGNAL(qmlSignal(QVariant))
+                     , &jw, SLOT(cppSlots(QVariant)));
 
     return app.exec();
 }

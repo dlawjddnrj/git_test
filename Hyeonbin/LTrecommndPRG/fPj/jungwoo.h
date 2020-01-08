@@ -12,7 +12,6 @@ public:
     ~jungwoo();
 
 public slots:
-//    void inputLottoNumber(QVariant num);
     static QVariant return_randomvalue(QVariant random);
 };
 
