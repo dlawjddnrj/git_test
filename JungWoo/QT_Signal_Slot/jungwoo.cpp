@@ -9,9 +9,9 @@ jungwoo::jungwoo(QObject* obj) : jw_(obj)
 }
 
 void jungwoo::cppSlots(QVariant var)
-{   
-    string str[] = {"a"};
-//    jw_->setProperty(str[0].c_str(), QVariant(var));
+{
+/*
+    jw_->setProperty(str[0].c_str(), QVariant(var));
     qDebug() << var;
     int temp = var.canConvert<int>() ? var.toInt() + 1 : +0;
     qDebug() << temp;
@@ -36,7 +36,7 @@ void jungwoo::cppSlots(QVariant var)
 
     if(iter != mapJungWoo.end()) {
         qDebug() << "Key 5 Value : " << iter.value();
-//        jw_->setProperty(str[0].c_str(), QVariant(iter.value()));
+        jw_->setProperty(str[0].c_str(), QVariant(iter.value()));
         iter = mapJungWoo.find(20);
     }
 
@@ -70,8 +70,63 @@ void jungwoo::cppSlots(QVariant var)
         qDebug() << "Find set value 20!";
     }
 
-//    while(i != setJungWoo.constEnd()) {
-//        qDebug() << "is QSet All Value" << *i;
-//        ++i;
-//    }
+    while(i != setJungWoo.constEnd()) {
+        qDebug() << "is QSet All Value" << *i;
+        ++i;
+    } QMap, QSet 예제 코드 */
+
+    string str[] = {"0.1"};
+
+
+    bool a = true;
+    QString Qstr = "hi!";
+    QString version = "0.1";
+
+    int test = var.toInt();
+    qDebug() << test;
+
+    // 절대로 이렇게 쓰면 안됨 혼남 12번씩 혼남 < emit으로 전달하는 방법을 찾아보자 >
+    QObject * textrect = jw_->findChild<QObject*>("resultText");
+
+    if(test <= 3) {
+        switch (test) {
+        case choice1 :
+            textrect->setProperty("text", version);
+            test = NULL;
+            break;
+
+        case choice2:
+            textrect->setProperty("text", a);
+            test = NULL;
+            break;
+
+        case choice3:
+            textrect->setProperty("text", Qstr);
+            test = NULL;
+            break;
+        }
+    } else {
+        textrect->setProperty("text", "error!!");
+    }
+
+
+    Computer::cppComputer(a, Qstr, version);
+}
+
+Computer::Computer(bool p, QString t, QString v)
+    : power(p), text(t), ver(v)
+{
+    qDebug() << "Create power : " << power;
+    qDebug() << "Create text : " << text;
+    qDebug() << "Create version : " << ver;
+}
+
+Computer::~Computer()
+{ }
+
+void Computer::cppComputer(QVariant power_, QVariant text_, QVariant ver_)
+{
+    Computer c(false, "jungwoo", "0.2");
+    qDebug() << c.power << c.text << c.ver;
+    qDebug() << power_ << text_ << ver_;
 }
