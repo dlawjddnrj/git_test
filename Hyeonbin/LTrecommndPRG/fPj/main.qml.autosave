@@ -132,7 +132,7 @@ Window {
             MouseArea{
 
                 MediaPlayer{
-                    autoPlay: true
+                    
                     id: bgm_Play
                     source: "BGM.wav"//추가예정
 
