@@ -8,13 +8,13 @@ using namespace std;
 
 class connect : public QObject
 {
-public:
     Q_OBJECT
-    QObject* qml_connect;
+public:   
     connect();
+    QObject* qml_connect;    
     ~connect();
 public slots:
-    void cppFunc(QVariant var);
+    void cppFunc(QVariant stringData);
 };
 
 #endif // CONNECT_H

@@ -54,11 +54,11 @@ static const uint qt_meta_data_connect[] = {
        0,       // flags
        0,       // signalCount
 
- // methods: name, argc, parameters, tag, flags
-       1,    1,   19,    2, 0x02 /* Public */,
+ // slots: name, argc, parameters, tag, flags
+       1,    1,   19,    2, 0x0a /* Public */,
 
- // methods: parameters
-    QMetaType::Void, QMetaType::QString,    3,
+ // slots: parameters
+    QMetaType::Void, QMetaType::QVariant,    3,
 
        0        // eod
 };
@@ -69,7 +69,7 @@ void connect::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, voi
         auto *_t = static_cast<connect *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->cppFunc((*reinterpret_cast< QString(*)>(_a[1]))); break;
+        case 0: _t->cppFunc((*reinterpret_cast< QVariant(*)>(_a[1]))); break;
         default: ;
         }
     }
