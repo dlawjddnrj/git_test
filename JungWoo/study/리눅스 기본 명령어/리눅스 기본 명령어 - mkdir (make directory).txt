@@ -1,0 +1,7 @@
+mkdir 은 새로운 디렉토리를 만들 때 사용하는 명령어입니다.
+
+mkdir dirname : dirname 의 디렉토리를 생성합니다.
+
+mkdir -p dirname/subdname : 존재하지 않는 디렉토리의 하위디렉토리까지 생성합니다.
+
+mk -m 644 dirname : 특정 퍼미션을 갖는 디렉토리를 생성합니다.

@@ -1,0 +1,9 @@
+touch 는 파일의 용량이 0인 파일을 생성, 날짜 변경하는 명령어 입니다.
+
+touch filename : filename 의 파일을 생성합니다.
+
+touch -c filename : filename 의 시간을 현재시간으로 변경합니다.
+
+touch -t 200001011200 filename : filename 의 시간을 날짜정보(YYYYMMDDhhmm) 로 변경합니다.
+
+touch -r filename1 filename2 : filename2의 날짜정보를 filename1 의 날짜정보와 같게 변경합니다.
