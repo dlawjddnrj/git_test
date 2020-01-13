@@ -31,9 +31,9 @@ int Account::Withdraw(int money) {
 }
 
 void Account::ShowAccInfo() const {
-    cout << "계좌 ID : " << accID << endl;
-    cout << "이 름 : " << cusName << endl;
-    cout << "잔 액 : " << balance << endl;
+    cout << "Account ID : " << accID << endl;
+    cout << "Name : " << cusName << endl;
+    cout << "Balance : " << balance << endl;
 }
 
 Account::~Account() {

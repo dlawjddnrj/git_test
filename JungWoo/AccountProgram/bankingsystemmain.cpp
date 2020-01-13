@@ -13,7 +13,7 @@ int main(int argc, char *argv[])
         while(1)
         {
             manager.ShowMenu();
-            cout << "선택: ";
+            cout << "Choice: ";
             cin >> choice;
             cout << endl;
 
@@ -32,10 +32,10 @@ int main(int argc, char *argv[])
                     manager.ShowAllAccInfo();
                     break;
                 case EXIT:
-                    cout << "프로그램을 종료하겠습니다." << endl;
+                    cout << "I'll close the program." << endl;
                     return 0;
                 default:
-                    cout << "잘못 선택하셨습니다. 다시 선택하여 주세요." << endl << endl;
+                    cout << "You made the wrong choice. Please select again." << endl << endl;
             }
         }
         return 0;

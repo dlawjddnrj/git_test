@@ -4,6 +4,7 @@
 #include <QObject>
 #include <QVariant>
 #include <iostream>
+
 using namespace std;
 
 enum user {
@@ -18,6 +19,7 @@ class jungwoo : public QObject
 public:
     jungwoo(QObject* jw);
     QObject* jw_;
+    ~jungwoo();
 
 public slots:
     void cppSlots(QVariant var);

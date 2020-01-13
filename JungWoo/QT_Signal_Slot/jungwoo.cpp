@@ -1,17 +1,18 @@
 #include "jungwoo.h"
+#include <QGuiApplication>
+#include <QQmlApplicationEngine>
 #include <QtDebug>
 #include <QMap>
 #include <QSet>
 
-jungwoo::jungwoo(QObject* obj) : jw_(obj)
-{
+jungwoo::jungwoo(QObject* obj) : jw_(obj) { }
 
-}
+jungwoo::~jungwoo() { }
 
 void jungwoo::cppSlots(QVariant var)
 {
-/*
-    jw_->setProperty(str[0].c_str(), QVariant(var));
+    /*
+    jw_->setProperty("text", QVariant(var));
     qDebug() << var;
     int temp = var.canConvert<int>() ? var.toInt() + 1 : +0;
     qDebug() << temp;
@@ -36,13 +37,13 @@ void jungwoo::cppSlots(QVariant var)
 
     if(iter != mapJungWoo.end()) {
         qDebug() << "Key 5 Value : " << iter.value();
-        jw_->setProperty(str[0].c_str(), QVariant(iter.value()));
+        jw_->setProperty("text", QVariant(iter.value()));
         iter = mapJungWoo.find(20);
     }
 
     if(iter != mapJungWoo.end()) {
         qDebug() << "Key 20 Value : " << iter.value();
-        jw_->setProperty(str[0].c_str(), QVariant(iter.value()));
+        jw_->setProperty("text", QVariant(iter.value()));
     }
 
     qDebug() << mapJungWoo;
@@ -70,45 +71,44 @@ void jungwoo::cppSlots(QVariant var)
         qDebug() << "Find set value 20!";
     }
 
-    while(i != setJungWoo.constEnd()) {
-        qDebug() << "is QSet All Value" << *i;
-        ++i;
-    } QMap, QSet 예제 코드 */
-
-    string str[] = {"0.1"};
-
+//    while(i != setJungWoo.constEnd()) {
+//        qDebug() << "is QSet All Value" << *i;
+//        ++i;
+//    } */
 
     bool a = true;
     QString Qstr = "hi!";
-    QString version = "0.1";
-
-    int test = var.toInt();
-    qDebug() << test;
+    QString version = "The current version is 0.1";
 
     // 절대로 이렇게 쓰면 안됨 혼남 12번씩 혼남 < emit으로 전달하는 방법을 찾아보자 >
     QObject * textrect = jw_->findChild<QObject*>("resultText");
 
-    if(test <= 3) {
-        switch (test) {
+    if(!var.toInt()) {
+        QString re = "input not is Menu choice !";
+        textrect->setProperty("text", re);
+    }
+
+    int choice = var.toInt();
+
+    if(choice <= 3) {
+        switch (choice) {
         case choice1 :
             textrect->setProperty("text", version);
-            test = NULL;
+            choice = NULL;
             break;
 
         case choice2:
             textrect->setProperty("text", a);
-            test = NULL;
+            choice = NULL;
             break;
 
         case choice3:
-            textrect->setProperty("text", Qstr);
-            test = NULL;
+            QCoreApplication::exit();
             break;
         }
     } else {
         textrect->setProperty("text", "error!!");
     }
-
 
     Computer::cppComputer(a, Qstr, version);
 }

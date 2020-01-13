@@ -60,6 +60,8 @@ void MainWindow::keyPressEvent(QKeyEvent *event)
         {
         case Qt::Key_Enter: text ="Key_Enter"; break;
 
+        case 16777220: text = "Key_Enter"; break;
+
         default: break;
         }
 

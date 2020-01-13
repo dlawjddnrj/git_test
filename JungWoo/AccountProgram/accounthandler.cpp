@@ -6,19 +6,19 @@
 
 void AccountHandler::ShowMenu() const {
     cout << "----- Menu -----" << endl;
-    cout << "1.  계좌개설 " << endl;
-    cout << "2.  입 금 " << endl;
-    cout << "3.  출 금 " << endl;
-    cout << "4.  계좌정보 전체 출력 " << endl;
-    cout << "5.  프로그램 종료 " << endl;
+    cout << "1.  account opening " << endl;
+    cout << "2.  Deposit " << endl;
+    cout << "3.  Withdrawal " << endl;
+    cout << "4.  Full print of account information " << endl;
+    cout << "5.  Program Termination " << endl;
 }
 
 void AccountHandler::MakeAccount() {
     int sel;
-    cout << "[계좌종류선택]" << endl;
-    cout << "1. 보통예금계좌 ";
-    cout << "2. 신용신뢰계좌" << endl;
-    cout << "선택 : "; cin >> sel;
+    cout << "[Account type selection]" << endl;
+    cout << "1. ordinary deposit account ";
+    cout << "2. Credit trust account" << endl;
+    cout << "Choice : "; cin >> sel;
 
     if(sel == NORMAL) {
         MakeNormalAccount();
@@ -33,12 +33,12 @@ void AccountHandler::MakeNormalAccount() {
     int balance;
     int interRate;
 
-    cout << "[보통예금계좌 개설]" << endl;
-    cout << "*** 계좌는 숫자로 입력 ***" << endl;
-    cout << "계좌ID : "; cin >> id;
-    cout << "이 름 : "; cin >> name;
-    cout << "입금액 : "; cin >> balance;
-    cout << "이자율 : "; cin >> interRate;
+    cout << "[Open a savings account]" << endl;
+    cout << "*** Enter a number for your account ***" << endl;
+    cout << "Account ID : "; cin >> id;
+    cout << "Name : "; cin >> name;
+    cout << "Amount received : "; cin >> balance;
+    cout << "Interest rate : "; cin >> interRate;
     cout << endl;
 
     accArr[accNum++] = new NormalAccount(id, balance, name, interRate);
@@ -51,13 +51,13 @@ void AccountHandler::MakeCreditAccount() {
     int interRate;
     int creditLevel;
 
-    cout << "[신용신뢰계좌 개설]" << endl;
-    cout << "*** 계좌는 숫자로 입력 ***" << endl;
-    cout << "계좌ID : "; cin >> id;
-    cout << "이 름 : "; cin >> name;
-    cout << "입금액 : "; cin >> balance;
-    cout << "이자율 : "; cin >> interRate;
-    cout << "신용등급(1 to A, 2 to B, 3 to C) : "; cin >> creditLevel;
+    cout << "[Opening a Credit Trust Account]" << endl;
+    cout << "*** Enter a number for your account ***" << endl;
+    cout << "Account ID : "; cin >> id;
+    cout << "Name : "; cin >> name;
+    cout << "Amount received : "; cin >> balance;
+    cout << "Interest rate : "; cin >> interRate;
+    cout << "Credit rating (1 to A, 2 to B, 3 to C) : "; cin >> creditLevel;
     cout << endl;
 
     switch(creditLevel) {
@@ -76,42 +76,42 @@ void AccountHandler::DepositMoney() {
     int money;
     int id;
 
-    cout << "[입 금]" << endl;
-    cout << "계좌 ID : "; cin >> id;
-    cout << "입금액 : "; cin >> money;
+    cout << "[Deposit]" << endl;
+    cout << "Account ID : "; cin >> id;
+    cout << "Amount received : "; cin >> money;
 
     for(int i = 0; i < accNum; i++)
     {
         if(accArr[i]->getAccID() == id)
         {
             accArr[i]->Deposit(money);
-            cout << "입금이 완료되었습니다." << endl;
+            cout << "The deposit has been completed." << endl;
             return;
         }
     }
-    cout << "유효하지 않은 ID 입니다." << endl << endl;
+    cout << "Invalid ID." << endl << endl;
 }
 
 void AccountHandler::WithdrawMoney() {
     int money;
     int id;
 
-    cout << "[출 금]" << endl;
-    cout << "계좌 ID : "; cin >> id;
-    cout << "출금액 : "; cin >> money;
+    cout << "[Withdrawal]" << endl;
+    cout << "Account ID : "; cin >> id;
+    cout << "Forwarding amount : "; cin >> money;
 
     for(int i = 0; i < accNum; i++) {
         if(accArr[i]->getAccID() == id) {
             if(accArr[i]->Withdraw(money) == 0) {
-                cout << "잔액이 부족합니다." << endl << endl;
+                cout << "Insufficient balance." << endl << endl;
                 return;
             }
 
-            cout << "출금이 완료되었습니다." << endl << endl;
+            cout << "The withdrawal is complete." << endl << endl;
             return;
         }
     }
-    cout << "유효하지 않은 ID 입니다." << endl << endl;
+    cout << "Invalid ID." << endl << endl;
 }
 
 AccountHandler::AccountHandler() : accNum(0) { }
