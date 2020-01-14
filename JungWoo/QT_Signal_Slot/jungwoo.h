@@ -21,9 +21,44 @@ public:
     QObject* jw_;
     ~jungwoo();
 
+
 public slots:
     void cppSlots(QVariant var);
 };
+
+class ConnectEvent : public QObject {
+    Q_OBJECT
+
+public:
+    ConnectEvent();
+    ~ConnectEvent();
+public slots:
+    void cppSignaltoQmlSlot(QVariant);
+
+public:
+    void setWindow(QObject* Window);
+    QObject* mMainView;
+
+signals:
+    void cppSignalTestData(QVariant);
+};
+
+//class QPropertyTest : public QObject {
+//    Q_OBJECT
+//    Q_PROPERTY(bool testBoolean READ testBoolean WRITE setTestBoolean NOTIFY testBooleanChanged)
+
+//private:
+//    bool m_testBoolean;
+
+//public:
+//    QPropertyTest(QObject *parent = nullptr);
+//    bool testBoolean();
+//    void setTestBoolean(bool value);
+
+//signals:
+//    void testBooleanChanged(const bool value);
+//};
+
 
 class Computer
 {

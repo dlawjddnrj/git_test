@@ -1,4 +1,4 @@
-import QtQuick 2.2
+import QtQuick 2.9
 import QtQuick.Window 2.12
 import QtQuick.Controls 2.5
 import QtQuick.Dialogs 1.3
@@ -10,6 +10,16 @@ Window {
     title: qsTr("Hello World")
 
     signal qmlSignal(var a)
+    signal qmlSignal2(var data)
+
+    function qmlSlotTestData(data) {
+        console.log("qml : " + data)
+    }
+
+    function buttonClicked() {
+        qmlSignal(itemId.choice)
+        qmlSignal2(itemId.choice)
+    }
 
     Item {
         id: itemId
@@ -46,9 +56,9 @@ Window {
                 console.log("Key Pressed : " + event.key)
                 switch(event.key) {
                 case 16777220:
-                    qmlSignal(itemId.choice)
+                    buttonClicked()
                 case 16777221:
-                    qmlSignal(itemId.choice)
+                    buttonClicked()
                 }
             }
         }
@@ -67,7 +77,7 @@ Window {
             x: 50
             y: 80
             onClicked: {
-                qmlSignal(itemId.choice)
+                buttonClicked()
             }
 
             Text {

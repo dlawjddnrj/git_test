@@ -82,9 +82,9 @@ void jungwoo::cppSlots(QVariant var)
 
     // 절대로 이렇게 쓰면 안됨 혼남 12번씩 혼남 < emit으로 전달하는 방법을 찾아보자 >
     QObject * textrect = jw_->findChild<QObject*>("resultText");
+    QString re = "input not is Menu choice !";
 
     if(!var.toInt()) {
-        QString re = "input not is Menu choice !";
         textrect->setProperty("text", re);
     }
 
@@ -107,10 +107,33 @@ void jungwoo::cppSlots(QVariant var)
             break;
         }
     } else {
-        textrect->setProperty("text", "error!!");
+        textrect->setProperty("text", re);
     }
 
     Computer::cppComputer(a, Qstr, version);
+}
+
+ConnectEvent::ConnectEvent() {
+}
+ConnectEvent::~ConnectEvent() { }
+
+void ConnectEvent::cppSignaltoQmlSlot(QVariant a) {
+    emit cppSignalTestData(3);
+    emit cppSignalTestData("Hello");
+    emit cppSignalTestData("Apple");
+    emit cppSignalTestData(a);
+
+    // a가 String인지 int인지 검사 후 int이면 각 두개의 숫자를 더 받아와서 계산.
+}
+
+void ConnectEvent::setWindow(QObject *Window) {
+
+    mMainView = Window;
+    // cpp에서 qml로 신호 연결
+    QObject::connect(this, SIGNAL(cppSignalTestData(QVariant)), mMainView, SLOT(qmlSlotTestData(QVariant)));
+
+    // qml에서 cpp로 신호 연결
+    QObject::connect(mMainView, SIGNAL(qmlSignal2(QVariant)), this, SLOT(cppSignaltoQmlSlot(QVariant)));
 }
 
 Computer::Computer(bool p, QString t, QString v)
@@ -126,7 +149,7 @@ Computer::~Computer()
 
 void Computer::cppComputer(QVariant power_, QVariant text_, QVariant ver_)
 {
-    Computer c(false, "jungwoo", "0.2");
+    Computer c(false, "jungwoo", "0.3");
     qDebug() << c.power << c.text << c.ver;
     qDebug() << power_ << text_ << ver_;
 }
