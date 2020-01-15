@@ -4,6 +4,8 @@
 #include <QtDebug>
 #include <QMap>
 #include <QSet>
+#include <QList>
+#include <time.h>
 
 jungwoo::jungwoo(QObject* obj) : jw_(obj) { }
 
@@ -118,12 +120,47 @@ ConnectEvent::ConnectEvent() {
 ConnectEvent::~ConnectEvent() { }
 
 void ConnectEvent::cppSignaltoQmlSlot(QVariant a) {
-    emit cppSignalTestData(3);
-    emit cppSignalTestData("Hello");
-    emit cppSignalTestData("Apple");
+//    emit cppSignalTestData(3);
+//    emit cppSignalTestData("Hello");
+//    emit cppSignalTestData("Apple");
+//    emit cppSignalTestData(a);
+
+    QList<QString> testListOne;
+    QList<QString> testListTwo;
+    QList<QString>::iterator iter;
     emit cppSignalTestData(a);
 
+    clock_t start, end;
+    double result;
+
+    testListTwo.append("Hi");
+    testListTwo.append("My name is");
+    testListTwo.append("JungWoo");
+
+    start = clock(); // 시간 측정 시작
+
+    for(int i = 0; i < 100000; i++) {
+//        testListOne.push_front(testListTwo.first());      // 1 = 3278, 2 = 3231, 3 = 3324, 4 = 3365, 5 = 3323, 6 = 3213, 7 = 3196, 8 = 3178, 9 = 3162, 10 = 3250
+        // 평균 3252
+        testListOne.prepend(testListTwo.first());           // 1 = 3233, 2 = 3198, 3 = 3214, 4 = 3213, 5 = 3368, 6 = 3379, 7 = 3317, 8 = 3319, 9 = 3363, 10 = 3232
+        // 평균 3283.6
+    }
+
+    for(iter = testListOne.begin(); iter != testListOne.end(); iter++) {
+        qDebug() << *iter;
+    }
+    end = clock();
+   result = (double)(end - start);
+
+   qDebug() << "push_front time : " << result;
+
     // a가 String인지 int인지 검사 후 int이면 각 두개의 숫자를 더 받아와서 계산.
+//    bool test ;
+//    a.toString();
+
+//    if(a.toInt()) {
+//        test = true;
+//    }
 }
 
 void ConnectEvent::setWindow(QObject *Window) {
