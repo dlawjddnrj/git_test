@@ -35,5 +35,16 @@ int main(int argc, char *argv[])
     QObject::connect(engine.rootObjects().first(), SIGNAL(qmlSignal(QVariant))
                      , &jw, SLOT(cppSlots(QVariant)));
 
+    // calcultor qml에서 cpp로 신호 보내기
+    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum0()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum1()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum2()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum3()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum4()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum5()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum6()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum7()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum8()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(calculator()), &jw, SLOT(button_objnum9()));
     return app.exec();
 }

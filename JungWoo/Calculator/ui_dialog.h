@@ -56,6 +56,7 @@ public:
         Dialog->setModal(false);
         pushButton_num0 = new QPushButton(Dialog);
         pushButton_num0->setObjectName(QString::fromUtf8("pushButton_num0"));
+        pushButton_num0->setEnabled(true);
         pushButton_num0->setGeometry(QRect(140, 270, 101, 31));
         QFont font;
         font.setFamily(QString::fromUtf8("Arial"));

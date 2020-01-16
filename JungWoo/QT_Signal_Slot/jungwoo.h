@@ -21,9 +21,19 @@ public:
     QObject* jw_;
     ~jungwoo();
 
-
 public slots:
     void cppSlots(QVariant var);
+    void button_objnum0();
+//    void button_objnum1();
+//    void button_objnum2();
+//    void button_objnum3();
+//    void button_objnum4();
+//    void button_objnum5();
+//    void button_objnum6();
+//    void button_objnum7();
+//    void button_objnum8();
+//    void button_objnum9();
+
 };
 
 class ConnectEvent : public QObject {
