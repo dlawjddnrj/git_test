@@ -5,21 +5,26 @@ import QtQuick.Dialogs 1.3
 
 Window {
     visible: true
-    width: 640
-    height: 480
+    width: 1024
+    height: 768
     title: qsTr("Hello World")
 
     signal qmlSignal(var a)
     signal qmlSignal2(var data)
-    signal calculator()
+    signal calculatorNum0()
+    signal calculatorNum1()
+    signal calculatorNum2()
+    signal calculatorNum3()
+    signal calculatorNum4()
+    signal calculatorNum5()
+    signal calculatorNum6()
+    signal calculatorNum7()
+    signal calculatorNum8()
+    signal calculatorNum9()
 
     function qmlSlotTestData() {
         qmlSignal(itemId.choice)
         qmlSignal2(itemId.choice)
-    }
-
-    function buttonClicked() {
-        calculator()
     }
 
     Item {
@@ -40,7 +45,8 @@ Window {
         height: 300
         color: "black"
 
-        TextEdit {
+        // linedit 사용
+        TextInput {
             id: user_textedit
             x: 0
             y: 0
@@ -145,6 +151,8 @@ Window {
         }
     }
 
+
+
     Rectangle {
         id: rectangle
         x: 0
@@ -153,7 +161,7 @@ Window {
         height: 200
         color: "#4309a0"
         objectName: "rectangle"
-        visible: false
+        visible: true
 
         Button {
             id: button_num0
@@ -167,7 +175,7 @@ Window {
                 color: "#FFC748"
             }
             onClicked: {
-                buttonClicked()
+                calculatorNum0();
             }
         }
 
@@ -182,6 +190,9 @@ Window {
             background: Rectangle {
                 color: "#FFC748"
             }
+            onClicked: {
+                calculatorNum1();
+            }
         }
 
         Button {
@@ -194,6 +205,9 @@ Window {
             text: qsTr("02")
             background: Rectangle {
                 color: "#FFC748"
+            }
+            onClicked: {
+                calculatorNum2();
             }
         }
 
@@ -208,6 +222,9 @@ Window {
             background: Rectangle {
                 color: "#FFC748"
             }
+            onClicked: {
+                calculatorNum3();
+            }
         }
 
         Button {
@@ -220,6 +237,9 @@ Window {
             text: qsTr("04")
             background: Rectangle {
                 color: "#FFC748"
+            }
+            onClicked: {
+                calculatorNum4();
             }
         }
 
@@ -234,6 +254,9 @@ Window {
             background: Rectangle {
                 color: "#FFC748"
             }
+            onClicked: {
+                calculatorNum5();
+            }
         }
 
         Button {
@@ -246,6 +269,9 @@ Window {
             text: qsTr("06")
             background: Rectangle {
                 color: "#FFC748"
+            }
+            onClicked: {
+                calculatorNum6();
             }
         }
 
@@ -260,6 +286,9 @@ Window {
             background: Rectangle {
                 color: "#FFC748"
             }
+            onClicked: {
+                calculatorNum7();
+            }
         }
 
         Button {
@@ -272,6 +301,9 @@ Window {
             text: qsTr("08")
             background: Rectangle {
                 color: "#FFC748"
+            }
+            onClicked: {
+                calculatorNum8();
             }
         }
 
@@ -286,10 +318,14 @@ Window {
             background: Rectangle {
                 color: "#FFC748"
             }
+            onClicked: {
+                calculatorNum9();
+            }
         }
 
         Button {
             id: button_plus
+            objectName: "button_objplus"
             x: 523
             y: 10
             width: 96
@@ -304,6 +340,7 @@ Window {
 
         Button {
             id: button_miuns
+            objectName: "button_objmiuns"
             x: 523
             y: 60
             width: 96
@@ -318,6 +355,7 @@ Window {
 
         Button {
             id: button_mul
+            objectName: "button_objmul"
             x: 523
             y: 110
             width: 96
@@ -332,6 +370,7 @@ Window {
 
         Button {
             id: button_div
+            objectName: "button_objdiv"
             x: 523
             y: 160
             width: 96
@@ -346,6 +385,7 @@ Window {
 
         Button {
             id: button_clear
+            objectName: "button_objclear"
             x: 440
             y: 160
             width: 56
@@ -369,6 +409,7 @@ Window {
             verticalAlignment: Text.AlignVCenter
             font.bold: true
             font.pixelSize: 18
+
             Rectangle {
                 width: calculatorTextFrist.width
                 height: calculatorTextFrist.height
@@ -379,37 +420,43 @@ Window {
         }
 
         Text {
-            id: signText
+            id: operatorText
+            objectName: "operatorobjText"
             x: 70
             y: 25
             width: 26
             height: 27
             color: "#ffffff"
-            text: qsTr("+")
+            text: qsTr("")
+            visible: true
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.bold: true
             font.pixelSize: 20
+
             Rectangle {
                 width: signText.width
                 height: signText.height
                 border.color: "white"
                 border.width: 3
                 color: "transparent"
+                visible: true
             }
         }
         Text {
             id: calculatorTextSecond
+            objectName: "secondtext"
             x: 108
             y: 25
             width: 50
             height: 27
             color: "#ffffff"
-            text: qsTr("0")
+            text: qsTr("")
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
             font.bold: true
             font.pixelSize: 18
+
             Rectangle {
                 width: calculatorTextSecond.width
                 height: calculatorTextSecond.height
@@ -427,9 +474,11 @@ Window {
             height: 27
             color: "#ffffff"
             text: qsTr("=")
-            font.pixelSize: 20
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
+            font.bold: true
+            font.pixelSize: 20
+
             Rectangle {
                 width: calcultaorSignText.width
                 height: calcultaorSignText.height
@@ -437,20 +486,21 @@ Window {
                 border.width: 3
                 border.color: "#ffffff"
             }
-            font.bold: true
         }
 
         Text {
             id: calcultaorResultText
+            objectName: result
             x: 201
             y: 25
             width: 83
             height: 27
             color: "#ffffff"
             text: qsTr("123456")
-            font.pixelSize: 20
             horizontalAlignment: Text.AlignHCenter
             verticalAlignment: Text.AlignVCenter
+            font.bold: true
+            font.pixelSize: 20
             Rectangle {
                 width: calcultaorResultText.width
                 height: calcultaorResultText.height
@@ -458,7 +508,6 @@ Window {
                 border.width: 3
                 border.color: "#ffffff"
             }
-            font.bold: true
         }
     }
 
@@ -473,10 +522,3 @@ Window {
         onNo: console.log("continue !")
     } */
 }
-
-
-
-/*##^## Designer {
-    D{i:46;invisible:true}
-}
- ##^##*/

@@ -24,15 +24,22 @@ public:
 public slots:
     void cppSlots(QVariant var);
     void button_objnum0();
-//    void button_objnum1();
-//    void button_objnum2();
-//    void button_objnum3();
-//    void button_objnum4();
-//    void button_objnum5();
-//    void button_objnum6();
-//    void button_objnum7();
-//    void button_objnum8();
-//    void button_objnum9();
+    void button_objnum1();
+    void button_objnum2();
+    void button_objnum3();
+    void button_objnum4();
+    void button_objnum5();
+    void button_objnum6();
+    void button_objnum7();
+    void button_objnum8();
+    void button_objnum9();
+
+    void button_objplus();
+    void button_objmiuns();
+    void button_objmul();
+    void button_objdiv();
+    void button_objclear();
+//    QString result(QString * res);
 
 };
 

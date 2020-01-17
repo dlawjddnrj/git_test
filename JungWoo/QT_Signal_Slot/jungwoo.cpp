@@ -115,68 +115,150 @@ void jungwoo::cppSlots(QVariant var)
         textrect->setProperty("text", re);
     }
 
-    Computer::cppComputer(a, Qstr, version);
+//    Computer::cppComputer(a, Qstr, version);
 }
 
 void jungwoo::button_objnum0()
 {
-    QObject * text = jw_->findChild<QObject*>("fristtext");
-    text->setProperty("text", "0");
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+
+    qDebug()<<operatorText->property("text");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "0");
+    } else {
+        textS->setProperty("text", "0");
+    }
 }
 
-//void jungwoo::button_objnum1()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "1");
-//}
+void jungwoo::button_objnum1()
+{
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
 
-//void jungwoo::button_objnum2()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "2");
-//}
 
-//void jungwoo::button_objnum3()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "3");
-//}
+    qDebug()<<operatorText->property("text");
 
-//void jungwoo::button_objnum4()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "4");
-//}
+    QString converttext = operatorText->property("text").toString();
 
-//void jungwoo::button_objnum5()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "5");
-//}
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "1");
+    } else {
+        textS->setProperty("text", "1");
+    }
+}
 
-//void jungwoo::button_objnum6()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "6");
-//}
+void jungwoo::button_objnum2()
+{
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
 
-//void jungwoo::button_objnum7()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "7");
-//}
 
-//void jungwoo::button_objnum8()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "8");
-//}
+    qDebug()<<operatorText->property("text");
 
-//void jungwoo::button_objnum9()
-//{
-//    QObject * text = jw_->findChild<QObject*>("fristtext");
-//    text->setProperty("text", "9");
-//}
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "2");
+    } else {
+        textS->setProperty("text", "2");
+    }
+}
+
+void jungwoo::button_objnum3()
+{
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "3");
+    } else {
+        textS->setProperty("text", "3");
+    }
+}
+
+void jungwoo::button_objnum4()
+{
+    QObject * text = jw_->findChild<QObject*>("fristtext");
+    text->setProperty("text", "4");
+}
+
+void jungwoo::button_objnum5()
+{
+    QObject * text = jw_->findChild<QObject*>("fristtext");
+    text->setProperty("text", "5");
+}
+
+void jungwoo::button_objnum6()
+{
+    QObject * text = jw_->findChild<QObject*>("fristtext");
+    text->setProperty("text", "6");
+}
+
+void jungwoo::button_objnum7()
+{
+    QObject * text = jw_->findChild<QObject*>("fristtext");
+    text->setProperty("text", "7");
+}
+
+void jungwoo::button_objnum8()
+{
+    QObject * text = jw_->findChild<QObject*>("fristtext");
+    text->setProperty("text", "8");
+}
+
+void jungwoo::button_objnum9()
+{
+    QObject * text = jw_->findChild<QObject*>("fristtext");
+    text->setProperty("text", "9");
+}
+
+void jungwoo::button_objplus()
+{
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    jw_->setProperty("text", "+");
+}
+
+void jungwoo::button_objmiuns()
+{
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    jw_->setProperty("text", "-");
+}
+
+void jungwoo::button_objmul()
+{
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    jw_->setProperty("text", "X");
+}
+
+void jungwoo::button_objdiv()
+{
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    jw_->setProperty("text", "/");
+}
+
+void jungwoo::button_objclear()
+{
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    jw_->setProperty("text", "");
+}
+
+
 
 
 ConnectEvent::ConnectEvent() {
@@ -227,16 +309,16 @@ void ConnectEvent::setWindow(QObject *Window) {
 
     mMainView = Window;
     // cpp에서 qml로 신호 연결
-    QObject::connect(this, SIGNAL(cppSignalTestData(QVariant)), mMainView, SLOT(qmlSlotTestData(QVariant)));
+//    QObject::connect(this, SIGNAL(cppSignalTestData(QVariant)), mMainView, SLOT(qmlSlotTestData(QVariant)));
 
     // qml에서 cpp로 신호 연결
-    QObject::connect(mMainView, SIGNAL(qmlSignal2(QVariant)), this, SLOT(cppSignaltoQmlSlot(QVariant)));
+//    QObject::connect(mMainView, SIGNAL(qmlSignal2(QVariant)), this, SLOT(cppSignaltoQmlSlot(QVariant)));
 
     // calcultor qml에서 cpp로 신호 보내기
-    QObject::connect(mMainView, SIGNAL(calculator()), this, SLOT(button_objnum0()));
+//    QObject::connect(mMainView, SIGNAL(calculator()), this, SLOT(button_objnum0()));
 
-    // calcultor cpp에서 qml로 신호 보내기
-    QObject::connect(this, SIGNAL(button_objnum0()), mMainView, SLOT(buttonClicked()));
+//    // calcultor cpp에서 qml로 신호 보내기
+//    QObject::connect(this, SIGNAL(button_objnum0()), mMainView, SLOT(buttonClicked()));
 }
 
 Computer::Computer(bool p, QString t, QString v)
