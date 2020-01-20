@@ -124,9 +124,6 @@ void jungwoo::button_objnum0()
     QObject * textS = jw_->findChild<QObject*>("secondtext");
     QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
 
-
-    qDebug()<<operatorText->property("text");
-
     QString converttext = operatorText->property("text").toString();
 
     if(QString::compare(converttext, "") == 0) {
@@ -143,8 +140,6 @@ void jungwoo::button_objnum1()
     QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
 
 
-    qDebug()<<operatorText->property("text");
-
     QString converttext = operatorText->property("text").toString();
 
     if(QString::compare(converttext, "") == 0) {
@@ -159,9 +154,6 @@ void jungwoo::button_objnum2()
     QObject * textF = jw_->findChild<QObject*>("fristtext");
     QObject * textS = jw_->findChild<QObject*>("secondtext");
     QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
-
-
-    qDebug()<<operatorText->property("text");
 
     QString converttext = operatorText->property("text").toString();
 
@@ -189,38 +181,92 @@ void jungwoo::button_objnum3()
 
 void jungwoo::button_objnum4()
 {
-    QObject * text = jw_->findChild<QObject*>("fristtext");
-    text->setProperty("text", "4");
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "4");
+    } else {
+        textS->setProperty("text", "4");
+    }
 }
 
 void jungwoo::button_objnum5()
 {
-    QObject * text = jw_->findChild<QObject*>("fristtext");
-    text->setProperty("text", "5");
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "5");
+    } else {
+        textS->setProperty("text", "5");
+    }
 }
 
 void jungwoo::button_objnum6()
 {
-    QObject * text = jw_->findChild<QObject*>("fristtext");
-    text->setProperty("text", "6");
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "6");
+    } else {
+        textS->setProperty("text", "6");
+    }
 }
 
 void jungwoo::button_objnum7()
 {
-    QObject * text = jw_->findChild<QObject*>("fristtext");
-    text->setProperty("text", "7");
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "7");
+    } else {
+        textS->setProperty("text", "7");
+    }
 }
 
 void jungwoo::button_objnum8()
 {
-    QObject * text = jw_->findChild<QObject*>("fristtext");
-    text->setProperty("text", "8");
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "") + 8;
+    } else {
+        textS->setProperty("text", "") + 8;
+    }
 }
 
 void jungwoo::button_objnum9()
 {
-    QObject * text = jw_->findChild<QObject*>("fristtext");
-    text->setProperty("text", "9");
+    QObject * textF = jw_->findChild<QObject*>("fristtext");
+    QObject * textS = jw_->findChild<QObject*>("secondtext");
+    QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+
+    QString converttext = operatorText->property("text").toString();
+
+    if(QString::compare(converttext, "") == 0) {
+        textF->setProperty("text", "") + 9;
+    } else {
+        textS->setProperty("text", "") + 9;
+    }
 }
 
 void jungwoo::button_objplus()
@@ -254,8 +300,14 @@ void jungwoo::button_objdiv()
 void jungwoo::button_objclear()
 {
     QObject * operatorText = jw_->findChild<QObject*>("operatorobjText");
+    QObject * firstText = jw_->findChild<QObject*>("fristtext");
+    QObject * secondText = jw_->findChild<QObject*>("secondtext");
+    QObject * resultText = jw_->findChild<QObject*>("result");
 
-    jw_->setProperty("text", "");
+    operatorText->setProperty("text", "");
+    firstText->setProperty("text", "");
+    secondText->setProperty("text", "");
+    resultText->setProperty("text", "");
 }
 
 

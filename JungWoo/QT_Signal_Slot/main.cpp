@@ -46,5 +46,7 @@ int main(int argc, char *argv[])
     QObject::connect(engine.rootObjects().first(), SIGNAL(calculatorNum7()), &jw, SLOT(button_objnum7()));
     QObject::connect(engine.rootObjects().first(), SIGNAL(calculatorNum8()), &jw, SLOT(button_objnum8()));
     QObject::connect(engine.rootObjects().first(), SIGNAL(calculatorNum9()), &jw, SLOT(button_objnum9()));
+
+    QObject::connect(engine.rootObjects().first(), SIGNAL(clearbutton()), &jw, SLOT(button_objclear()));
     return app.exec();
 }

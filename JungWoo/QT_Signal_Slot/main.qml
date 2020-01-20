@@ -22,6 +22,8 @@ Window {
     signal calculatorNum8()
     signal calculatorNum9()
 
+    signal clearbutton()
+
     function qmlSlotTestData() {
         qmlSignal(itemId.choice)
         qmlSignal2(itemId.choice)
@@ -155,10 +157,10 @@ Window {
 
     Rectangle {
         id: rectangle
-        x: 0
-        y: 280
-        width: 641
-        height: 200
+        x: 306
+        y: 451
+        width: 718
+        height: 317
         color: "#4309a0"
         objectName: "rectangle"
         visible: true
@@ -394,6 +396,9 @@ Window {
             background: Rectangle {
                 color: "#ffc748"
             }
+            onClicked: {
+                clearbutton()
+            }
         }
 
         Text {
@@ -435,8 +440,8 @@ Window {
             font.pixelSize: 20
 
             Rectangle {
-                width: signText.width
-                height: signText.height
+                width: operatorText.width
+                height: operatorText.height
                 border.color: "white"
                 border.width: 3
                 color: "transparent"
@@ -490,7 +495,7 @@ Window {
 
         Text {
             id: calcultaorResultText
-            objectName: result
+            objectName: "result"
             x: 201
             y: 25
             width: 83
