@@ -4,7 +4,7 @@
 #include <QtDebug>
 #include <QMap>
 #include <QSet>
-#include <QList>
+//#include <QList>
 #include <time.h>
 
 jungwoo::jungwoo(QObject* obj) : jw_(obj) { }

@@ -22,6 +22,10 @@ Window {
     signal calculatorNum8()
     signal calculatorNum9()
 
+    signal miunsbutton()
+    signal divbutton()
+    signal plusbutton()
+    signal mulbutton()
     signal clearbutton()
 
     function qmlSlotTestData() {
@@ -338,6 +342,9 @@ Window {
             background: Rectangle {
                 color: "#9FE833"
             }
+            onClicked: {
+                plusbutton();
+            }
         }
 
         Button {
@@ -352,6 +359,9 @@ Window {
             font.bold: true
             background: Rectangle {
                 color: "#9FE833"
+            }
+            onClicked: {
+                miunsbutton()
             }
         }
 
@@ -368,6 +378,9 @@ Window {
             background: Rectangle {
                 color: "#9FE833"
             }
+            onClicked: {
+                mulbutton()
+            }
         }
 
         Button {
@@ -382,6 +395,9 @@ Window {
             font.bold: true
             background: Rectangle {
                 color: "#9FE833"
+            }
+            onClicked: {
+                divbutton()
             }
         }
 
