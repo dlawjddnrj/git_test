@@ -6,7 +6,9 @@ Window {
     visible: true
     width: 1024
     height: 768
-    title: qsTr("Hello World")
+    title: qsTr("Main Window")
+
+    signal mainQmlSignal()
 
     MainForm {
         anchors.fill: parent
@@ -21,13 +23,14 @@ Window {
         color: "red"
         anchors.centerIn: parent
 
-        Loader { id: pageLoader }
-
         Button {
             id: centerRectButton
             anchors.centerIn: centerRect
-            text: qsTr("Click To Button ~")
-            onClicked: pageLoader.source = "Test.qml"
+            text: qsTr("엑셀 프로그램 실행 !")
+            onClicked: {
+                mainQmlSignal()
+                pageLoader.source = "Excel.qml"
+            }
         }
     }
 
@@ -35,10 +38,12 @@ Window {
         id: rightRect
         width: 300; height: 300
         color: "yellow"
-        anchors.right: centerRect.left
+        anchors.left: centerRect.right
         Button {
             id: rightRectButton
+            anchors.centerIn: rightRect
             text: qsTr("Click To Button ~")
+            onClicked: uiLoader.source = "mainwindow.ui"
         }
     }
 
@@ -46,10 +51,13 @@ Window {
         id: leftRect
         width: 300; height: 300
         color: "green"
-        anchors.left: centerRect.right
+        anchors.right: centerRect.left
         Button {
+            anchors.centerIn: leftRect
             id: leftRectButton
             text: qsTr("Click To Button ~")
         }
     }
+    Loader { id: pageLoader }
+    Loader { id: uiLoader }
 }

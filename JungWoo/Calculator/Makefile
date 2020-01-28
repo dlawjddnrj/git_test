@@ -201,9 +201,18 @@ Makefile: Calculator_JW.pro ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\win3
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webengine.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webengine_private.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginecore.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginecore_private.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets.pri \
+		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri \
 		..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webview.pri \
@@ -376,9 +385,18 @@ Makefile: Calculator_JW.pro ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\win3
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_uiplugin.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_uitools.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_uitools_private.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_virtualkeyboard_private.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_vulkan_support_private.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webchannel.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webchannel_private.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webengine.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webengine_private.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginecore.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginecore_private.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginecoreheaders_private.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets.pri:
+..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webenginewidgets_private.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_websockets.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_websockets_private.pri:
 ..\..\..\Qt\Qt5.12.4\5.12.4\msvc2017_64\mkspecs\modules\qt_lib_webview.pri:

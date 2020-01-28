@@ -2,6 +2,6 @@
     <qresource prefix="/">
         <file>main.qml</file>
         <file>MainForm.ui.qml</file>
-        <file>Test.qml</file>
+        <file>Excel.qml</file>
     </qresource>
 </RCC>

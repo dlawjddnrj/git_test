@@ -31,3 +31,7 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 HEADERS += \
     jungwoo.h
+
+FORMS +=
+
+DISTFILES +=

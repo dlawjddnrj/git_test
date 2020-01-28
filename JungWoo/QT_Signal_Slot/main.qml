@@ -91,6 +91,7 @@ Window {
             y: 80
             onClicked: {
                 qmlSlotTestData()
+                calculatorLoader.source = "calculator.qml"
             }
 
             Text {
@@ -167,7 +168,7 @@ Window {
         height: 317
         color: "#4309a0"
         objectName: "rectangle"
-        visible: true
+        visible: false
 
         Button {
             id: button_num0
@@ -181,7 +182,7 @@ Window {
                 color: "#FFC748"
             }
             onClicked: {
-                calculatorNum0();
+                calculatorNum0()
             }
         }
 
@@ -412,9 +413,6 @@ Window {
             background: Rectangle {
                 color: "#ffc748"
             }
-            onClicked: {
-                clearbutton()
-            }
         }
 
         Text {
@@ -529,6 +527,10 @@ Window {
                 border.width: 3
                 border.color: "#ffffff"
             }
+        }
+
+        Loader {
+            id: calculatorLoader
         }
     }
 

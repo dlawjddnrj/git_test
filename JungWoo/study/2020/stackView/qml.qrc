@@ -1,6 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>main.qml</file>
-        <file>calculator.qml</file>
+        <file>page1.qml</file>
     </qresource>
 </RCC>

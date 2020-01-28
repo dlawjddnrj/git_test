@@ -102,8 +102,8 @@ void jungwoo::cppSlots(QVariant var)
             break;
 
         case choice2:
-            textrect->setProperty("text", "");
-            calrect->setProperty("visible", true);
+            textrect->setProperty("text", "2");
+//            calrect->setProperty("visible", true);
             choice = NULL;
             break;
 
