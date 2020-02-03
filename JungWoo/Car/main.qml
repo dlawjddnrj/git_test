@@ -8,7 +8,7 @@ Window {
     height: 768
     title: qsTr("Main Menu")
 
-    signal mainQML()
+    signal qmlSignal(var a)
 
     Rectangle {
         id: backgroundRect
@@ -38,6 +38,7 @@ Window {
 
                 onClicked: {
                     id_Loader.source = "Car.qml"
+//                    mainQML(test)
                 }
             }
 
@@ -49,7 +50,7 @@ Window {
                 height: 80
 
                 onClicked: {
-
+//                    qmlSignal(true)
                 }
             }
         }
@@ -58,5 +59,12 @@ Window {
     Loader {
         id: id_Loader
         x: 0; y: 0;
+    }
+
+    Connections {
+        target: id_Loader.item
+        onQmlsignal:{
+            qmlSignal(true)
+        }
     }
 }

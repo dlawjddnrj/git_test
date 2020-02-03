@@ -23,7 +23,7 @@ int main(int argc, char *argv[])
     engine.load(url);
 
     ConnectEvent *event = new ConnectEvent();
-    QObject *root = engine.rootObjects()[0];    // qrc:/main.qml을 등록한 엔진의 object값을 가져옴
+//    QObject *root = engine.rootObjects()[0];    // qrc:/main.qml을 등록한 엔진의 object값을 가져옴
 //    event->setWindow(qobjectCast<QObject *>(root));
     if(engine.rootObjects().isEmpty())
         return -1;
@@ -48,7 +48,7 @@ int main(int argc, char *argv[])
     QObject::connect(engine.rootObjects().first(), SIGNAL(calculatorNum9()), &jw, SLOT(button_objnum9()));
 
     QObject::connect(engine.rootObjects().first(), SIGNAL(clearbutton()), &jw, SLOT(button_objclear()));
-    QObject::connect(engine.rootObjects().first(), SIGNAL(plusbutton()), &jw, SLOT(button_objpuls()));
+//    QObject::connect(engine.rootObjects().first(), SIGNAL(plusbutton()), &jw, SLOT(button_objpuls()));
     QObject::connect(engine.rootObjects().first(), SIGNAL(miunsbutton()), &jw, SLOT(button_objmiuns()));
     QObject::connect(engine.rootObjects().first(), SIGNAL(mulbutton()), &jw, SLOT(button_objmul()));
     QObject::connect(engine.rootObjects().first(), SIGNAL(divbutton()), &jw, SLOT(button_objdiv()));
