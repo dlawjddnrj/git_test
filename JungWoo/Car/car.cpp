@@ -13,18 +13,26 @@ car::~car()
 
 }
 
+car::car() {
+    qDebug() << "car 생성";
+}
+
 void car::cppSlot(QVariant var_)
 {
-    qDebug() << var_;
+    SuperCar rambo(PERSONNEL);
 
     int temp = var_.canConvert<int>() ? var_.toInt()  : var_ == 0;
     qDebug() << "Yeah!" << ", " << temp;
-}
 
-//void car::setWindow(QQuickWindow* Window) {
-//    mMainView = Window;
-//    cpp();
-//}
+    QObject * car = car__->findChild<QObject*>("car");
+
+    int xValue = 274;
+    int yValue = 140;
+
+    for(int i = 0; i < 5; i++) {
+        car->setProperty("x", ++yValue);
+    }
+}
 
 bool car::startup(bool startup_)
 {
@@ -38,12 +46,16 @@ bool car::startup(bool startup_)
 void car::accelerator(bool startup_)
 {
     if(startup_ == true) {
-        ++carIndex;
+//        ++carIndex;
     }
 }
 
 void car::Break()
 {
-    --carIndex;
+//    --carIndex;
 }
 
+void SuperCar::openDoor()
+{
+
+}

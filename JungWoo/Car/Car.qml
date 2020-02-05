@@ -9,7 +9,8 @@ Window {
     height: 480
     title: qsTr("Car")
 
-    signal qmlsignal(int a)
+    signal qmlsignal(var a)
+    property int keyType: 1
 
     Rectangle {
         id: backGroundRect
@@ -39,6 +40,7 @@ Window {
 
         Rectangle {
             id: car
+            objectName: "car"
             x: 274
             y: 140
             width: 92
@@ -49,6 +51,7 @@ Window {
 
             Rectangle {
                 id: rightFrontWheel
+                objectName: "rightFrontWheel"
                 x: 89
                 y: 0
                 width: 24
@@ -60,6 +63,7 @@ Window {
 
             Rectangle {
                 id: rightRearWheel
+                objectName: "rightRearWheel"
                 x: 89
                 y: 172
                 width: 24
@@ -71,6 +75,7 @@ Window {
 
             Rectangle {
                 id: leftRearWheel
+                objectName: "leftRearWheel"
                 x: -23
                 y: 172
                 width: 24
@@ -82,6 +87,7 @@ Window {
 
             Rectangle {
                 id: leftFrontWheel
+                objectName: "leftFrontWheel"
                 x: -22
                 y: 0
                 width: 24
@@ -97,7 +103,7 @@ Window {
             console.log("Key Pressed : " + event.key)
             switch(event.key) {
             case 16777234 :
-                    qmlsignal(1)
+                    qmlsignal(keyType.valueOf())
             case 16777235 :
                     qmlsignal(2)
             case 16777236 :

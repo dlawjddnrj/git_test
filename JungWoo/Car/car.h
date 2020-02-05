@@ -1,6 +1,8 @@
 #ifndef CAR_H
 #define CAR_H
 
+#define PERSONNEL 2
+
 #include <QObject>
 #include <QVariant>
 
@@ -11,7 +13,8 @@ public:
     car(QObject* car_);
     QObject* car__;
     ~car();
-    int carIndex = 0;
+
+    car();
 
 public slots:
     void cppSlot(QVariant var);
@@ -26,8 +29,21 @@ class SuperCar : public car
 {
     Q_OBJECT
 public:
-    SuperCar();
+    SuperCar(int personnel_) : personnel(personnel_) { }
     ~SuperCar();
+
+    void openDoor();
+
+private:
+    int personnel = 0;
+};
+
+class Passenger : public car
+{
+    Q_OBJECT
+public:
+    Passenger();
+    ~Passenger();
 };
 
 #endif // CAR_H
