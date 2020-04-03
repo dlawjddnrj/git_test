@@ -74,5 +74,4 @@ Window {
             onPressAndHold: console.log("And Hold!!!")
         }
     }
-    onPowerChanged:
 }
