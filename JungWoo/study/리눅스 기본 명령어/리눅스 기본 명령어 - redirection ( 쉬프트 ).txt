@@ -1,0 +1,15 @@
+redirection 은 리눅스 스트림의 방향을 조정하는 명령어 입니다.
+
+명령 > 파일 : 명령의 결과를 파일로 저장합니다.
+
+cat fname1 fname2 > fname3 : fname1,fname2 를 출력하고 fname3 이라는 파일에 저장합니다.
+
+명령 >> 파일 : 명령의 결과를 파일에 추가합니다.
+
+cat fname4 >> fname3 : fname3 에 fname4 의 내용을 추가합니다.
+
+명령 < 파일 : 파일의 데이터를 명령에 입력합니다.
+
+cat < fname1 : fname1 의 내용을 출력합니다.
+
+ex) cat < fname1 > fname2 : fname1 의 내용을 출력하는 결과물을 fname2 에 저장합니다.

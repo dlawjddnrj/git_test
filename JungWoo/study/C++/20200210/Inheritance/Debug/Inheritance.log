@@ -1,0 +1,11 @@
+﻿  main.cpp
+C:\Git_Group_Server\JungWoo\study\C++\20200210\Inheritance\main.cpp(176,1): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
+C:\Git_Group_Server\JungWoo\study\C++\20200210\Inheritance\main.cpp(203,1): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
+C:\Git_Group_Server\JungWoo\study\C++\20200210\Inheritance\main.cpp(204,1): error C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.18362.0\ucrt\string.h(133): message : 'strcpy' 선언을 참조하십시오.
+C:\Git_Group_Server\JungWoo\study\C++\20200210\Inheritance\main.cpp(232,70): error C2664: 'MyFriendDetailInfo::MyFriendDetailInfo(const MyFriendDetailInfo &)': 인수 1을(를) 'const char [4]'에서 'const char &'(으)로 변환할 수 없습니다.
+C:\Git_Group_Server\JungWoo\study\C++\20200210\Inheritance\main.cpp(232,70): message : 원인: 'const char [4]'에서 'const char'(으)로 변환할 수 없습니다.
+C:\Git_Group_Server\JungWoo\study\C++\20200210\Inheritance\main.cpp(232,24): message : 이 변환이 가능한 컨텍스트가 없습니다.
+C:\Git_Group_Server\JungWoo\study\C++\20200210\Inheritance\main.cpp(197,2): message : 'MyFriendDetailInfo::MyFriendDetailInfo' 선언을 참조하십시오.

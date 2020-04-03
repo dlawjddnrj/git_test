@@ -1,0 +1,11 @@
+cat 은 파일이름을 인자로 받아서 그 내용을 출력할 때 사용합니다.
+
+cat fname : fname 의 내용을 출력합니다.
+
+cat fname1 fname2 : fname1 과 fname2 의 내용을 이어서 출력합니다.
+
+cat fname1 fname2 | more : fname1, fname2 를 출력하는데 페이지별로 출력합니다.
+
+cat fname1 fname2 | head : fname1, fname2 를 출력하는데 처음부터 10번째까지만 출력합니다.
+
+cat fname1 fname2 | tail : fname1, fname2 를 출력하는데 끝에서부터 10번째까지만 출력합니다.

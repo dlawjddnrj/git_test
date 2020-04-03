@@ -1,0 +1,8 @@
+mv 는 파일을 이동하는 명령어 입니다. cp 와 비슷하지만 다른 점은 cp 는 파일을 복사하여 원본 파일이 남아있지만 
+mv 는 원본 파일이 남지 않는다는 점입니다. 그래서 이름 변경시에도 사용가능합니다.
+
+mv fname mfname : fname 의 파일을 mfname 의 이름으로 이동/변경 합니다.
+
+mv -b fname mfname : mfname 의 파일이 존재하면 mfname 을 백업한 뒤에 이동합니다.
+
+mv -f fname mfname : mfname 의 파일이 존재하면 백업 없이 덮어씁니다.
