@@ -1,15 +1,15 @@
 import QtQuick 2.0
 import QtQuick.Window 2.3
 import QtQuick.Controls 2.5
+
 Rectangle {
     signal qmlsignal(var a)
     property int keyType: 1
+    anchors.fill: parent
 
     id: backGroundRect
     x: 0
     y: 0
-    width: 640
-    height: 480
     color: "#bad76c"
 
     Rectangle {
@@ -102,6 +102,16 @@ Rectangle {
             qmlsignal(3)
         case 16777237 :
             qmlsignal(4)
+        }
+    }
+
+    Button {
+        id: id_previousButton
+        anchors.bottom: parent.bottom
+        anchors.horizontalCenter: parent.horizontalCenter
+        text: "go to Previous"
+        onClicked: {
+            id_stackView.pop()
         }
     }
 
