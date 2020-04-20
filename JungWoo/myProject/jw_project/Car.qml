@@ -1,90 +1,118 @@
 import QtQuick 2.0
 import QtQuick.Window 2.3
 import QtQuick.Controls 2.5
+import MyEnum 1.0
 
 Rectangle {
-    signal qmlsignal(var a)
-    property int keyType: 1
-    anchors.fill: parent
-
     id: backGroundRect
-    x: 0
-    y: 0
     color: "#bad76c"
+
+    signal carUpSignal()
+    signal carDownSignal()
+    signal carLeftSignal()
+    signal carRightSignal()
+    property int pro_value: 1
+    property int pro_X: 270
+    property int pro_Y: 140
+
+    Button {
+        text: "go to Previous"
+        anchors.horizontalCenter: parent.horizontalCenter
+        onClicked: {
+            id_stackView.pop()
+        }
+    }
+
+    Connections {
+        target: backGroundRect
+        onCarUpSignal: {
+            pro_X + pro_value
+            console.log("pro_X : " + pro_X)
+            id_car.visible = true
+        }
+        onCarDownSignal: {
+            pro_X - pro_value
+            console.log("pro_X : " + pro_X)
+            id_car.visible = false
+        }
+        onCarLeftSignal: {
+            pro_Y - pro_value
+            console.log("pro_Y : " + pro_Y)
+        }
+        onCarRightSignal: {
+            pro_Y + pro_value
+            console.log("pro_Y : " + pro_Y)
+        }
+    }
 
     Rectangle {
         id: leftLine
-        x: 132
-        y: 0
+        x: 240
         width: 5
-        height: 480
-        color: "#ffffff"
+        height: 768
+        color: "white"
     }
 
     Rectangle {
         id: rightLine
-        x: 517
-        y: 0
+        x: 760
         width: 5
-        height: 480
-        color: "#ffffff"
+        height: 768
+        color: "white"
     }
 
     Rectangle {
-        id: car
-        objectName: "car"
-        x: 274
-        y: 140
-        width: 92
+        id: id_car
+        x: pro_X
+        y: pro_Y
+        width: 100
         height: 200
         color: "#357fdc"
         radius: 10
         border.width: 3
+        anchors.horizontalCenter: parent.horizontalCenter
+        anchors.verticalCenter: parent.verticalCenter
 
         Rectangle {
             id: rightFrontWheel
-            objectName: "rightFrontWheel"
-            x: 89
-            y: 0
+            anchors.left: id_car.right
+            anchors.top: id_car.top
             width: 24
             height: 28
-            color: "#ffffff"
+            color: "white"
             radius: 12
             border.width: 3
         }
 
         Rectangle {
             id: rightRearWheel
-            objectName: "rightRearWheel"
-            x: 89
-            y: 172
+            anchors.left: id_car.right
+            anchors.bottom: id_car.bottom
             width: 24
             height: 28
-            color: "#ffffff"
+            color: "white"
             radius: 12
             border.width: 3
         }
 
         Rectangle {
             id: leftRearWheel
-            objectName: "leftRearWheel"
-            x: -23
-            y: 172
+            anchors.right: id_car.left
+            anchors.bottom: id_car.bottom
             width: 24
             height: 28
-            color: "#ffffff"
+            color: "white"
             radius: 12
             border.width: 3
         }
 
         Rectangle {
             id: leftFrontWheel
-            objectName: "leftFrontWheel"
-            x: -22
-            y: 0
+            anchors.right: id_car.left
+            anchors.top: id_car.top
             width: 24
             height: 28
-            color: "#ffffff"
+            color: "white"
             radius: 12
             border.width: 3
         }
@@ -94,24 +122,14 @@ Rectangle {
     Keys.onPressed: {
         console.log("Key Pressed : " + event.key)
         switch(event.key) {
-        case 16777234 :
-            qmlsignal(keyType.valueOf())
-        case 16777235 :
-            qmlsignal(2)
-        case 16777236 :
-            qmlsignal(3)
-        case 16777237 :
-            qmlsignal(4)
-        }
-    }
-
-    Button {
-        id: id_previousButton
-        anchors.bottom: parent.bottom
-        anchors.horizontalCenter: parent.horizontalCenter
-        text: "go to Previous"
-        onClicked: {
-            id_stackView.pop()
+        case MYEnum.LEFT :     // 왼
+            carLeftSignal()
+        case MYEnum.UP :     // 위
+            carUpSignal()
+        case MYEnum.RIGHT :     // 오
+            carRightSignal()
+        case MYEnum.DOWN :     // 아
+            carDownSignal()
         }
     }
 

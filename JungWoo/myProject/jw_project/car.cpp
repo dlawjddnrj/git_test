@@ -66,3 +66,8 @@ void SuperCar::openDoor()
 {
 
 }
+
+MyEnums::MyEnums(QObject *parent)
+{
+
+}

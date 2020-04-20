@@ -3,5 +3,8 @@
         <file>main.qml</file>
         <file>Car.qml</file>
         <file>print.qml</file>
+        <file>pdkFileManager.qml</file>
+        <file>wigglytext.qml</file>
+        <file>2048.qml</file>
     </qresource>
 </RCC>

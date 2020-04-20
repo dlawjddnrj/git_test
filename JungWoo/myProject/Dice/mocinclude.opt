@@ -1,0 +1,42 @@
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/mkspecs/win32-msvc
+-IC:/Users/ghktk/Desktop/study_git/JungWoo/myProject/Dice
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3D/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3D/5.14.2/QtQuick3D
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DRuntimeRender/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DRuntimeRender/5.14.2/QtQuick3DRuntimeRender
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DAssetImport/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DAssetImport/5.14.2/QtQuick3DAssetImport
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DRender/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DRender/5.14.2/QtQuick3DRender
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3D
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DRuntimeRender
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DAssetImport
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DRender
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick/5.14.2/QtQuick
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DUtils/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DUtils/5.14.2/QtQuick3DUtils
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui/5.14.2/QtGui
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQuick3DUtils
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtOpenGLExtensions
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtGui
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtANGLE
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels/5.14.2/QtQmlModels
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQmlModels
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml/5.14.2/QtQml
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtQml
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtNetwork
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore/5.14.2
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore/5.14.2/QtCore
+-IC:/Qt/Qt5.14.2/5.14.2/msvc2017_64/include/QtCore
+-IC:\Program Files (x86)\Microsoft Visual Studio\2019\BuildTools\VC\Tools\MSVC\14.25.28610\include
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\ucrt
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\shared
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\um
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\winrt
+-IC:\Program Files (x86)\Windows Kits\10\include\10.0.18362.0\cppwinrt

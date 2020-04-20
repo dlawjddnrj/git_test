@@ -46,4 +46,19 @@ public:
     ~Passenger();
 };
 
+class MyEnums : public QObject
+{
+    Q_OBJECT
+public:
+    explicit MyEnums(QObject *parent = nullptr);
+
+    enum keyStatus {
+        LEFT = 16777234,
+        UP,
+        RIGHT,
+        DOWN
+    };
+    Q_ENUMS(keyStatus)
+};
+
 #endif // CAR_H
