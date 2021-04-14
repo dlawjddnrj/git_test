@@ -1,7 +1,7 @@
 #include <QGuiApplication>
-#include <QMetaObject>
 #include <QQmlApplicationEngine>
-#include <QQuickItem>
+
+#include "connectevent.h"
 
 int main(int argc, char *argv[])
 {
@@ -10,6 +10,9 @@ int main(int argc, char *argv[])
     QGuiApplication app(argc, argv);
 
     QQmlApplicationEngine engine;
+
+    qmlRegisterType<ConnectEvent>("ConnectEvent", 1, 0, "ConnectEvent");//class를 qml에서 사용하기 위해서 등록해주는 부분
+
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
@@ -17,21 +20,6 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
-
-    QObject* rootObject = engine.rootObjects().first();
-
-    QObject* mOne = Q_NULLPTR;
-
-    if(rootObject != Q_NULLPTR)
-    {
-        mOne = rootObject->findChild<QObject*>("objectName");
-    }
-
-    if(mOne != Q_NULLPTR)
-    {
-        QMetaObject::invokeMethod(mOne, "jwobject", Qt::DirectConnection);
-    }
-
 
     return app.exec();
 }

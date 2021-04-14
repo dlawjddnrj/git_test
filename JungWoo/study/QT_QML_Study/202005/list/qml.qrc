@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file>main.qml</file>
+        <file>listInfo.qml</file>
+        <file>deleteList.qml</file>
+    </qresource>
+</RCC>

@@ -1,7 +1,5 @@
 #include <QGuiApplication>
-#include <QMetaObject>
 #include <QQmlApplicationEngine>
-#include <QQuickItem>
 
 int main(int argc, char *argv[])
 {
@@ -17,21 +15,6 @@ int main(int argc, char *argv[])
             QCoreApplication::exit(-1);
     }, Qt::QueuedConnection);
     engine.load(url);
-
-    QObject* rootObject = engine.rootObjects().first();
-
-    QObject* mOne = Q_NULLPTR;
-
-    if(rootObject != Q_NULLPTR)
-    {
-        mOne = rootObject->findChild<QObject*>("objectName");
-    }
-
-    if(mOne != Q_NULLPTR)
-    {
-        QMetaObject::invokeMethod(mOne, "jwobject", Qt::DirectConnection);
-    }
-
 
     return app.exec();
 }

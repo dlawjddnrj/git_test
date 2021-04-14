@@ -1,7 +1,9 @@
 #include <QGuiApplication>
-#include <QMetaObject>
 #include <QQmlApplicationEngine>
-#include <QQuickItem>
+#include <QQmlContext>
+
+#include "todolist.h"
+#include "todomodel.h"
 
 int main(int argc, char *argv[])
 {
@@ -9,7 +11,14 @@ int main(int argc, char *argv[])
 
     QGuiApplication app(argc, argv);
 
+    qmlRegisterType<ToDoModel>("ToDo", 1, 0, "ToDoModel");
+    qmlRegisterUncreatableType<ToDoList>("ToDo", 1, 0, "ToDolist",
+       QStringLiteral("ToDoList should not be created in QML"));
+
+    ToDoList toDoList;
+
     QQmlApplicationEngine engine;
+    engine.rootContext()->setContextProperty(QStringLiteral("toDoList"), &toDoList);
     const QUrl url(QStringLiteral("qrc:/main.qml"));
     QObject::connect(&engine, &QQmlApplicationEngine::objectCreated,
                      &app, [url](QObject *obj, const QUrl &objUrl) {
@@ -18,20 +27,14 @@ int main(int argc, char *argv[])
     }, Qt::QueuedConnection);
     engine.load(url);
 
-    QObject* rootObject = engine.rootObjects().first();
-
-    QObject* mOne = Q_NULLPTR;
-
-    if(rootObject != Q_NULLPTR)
-    {
-        mOne = rootObject->findChild<QObject*>("objectName");
-    }
-
-    if(mOne != Q_NULLPTR)
-    {
-        QMetaObject::invokeMethod(mOne, "jwobject", Qt::DirectConnection);
-    }
-
-
     return app.exec();
 }
+
+//#include "MainMenu.h"
+
+//int main(int argc, char *argv[])
+//{
+//    MainMenu app(argc, argv);
+
+//    return app.exec();
+//}

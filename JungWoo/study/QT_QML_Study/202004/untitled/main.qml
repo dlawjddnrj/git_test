@@ -7,49 +7,79 @@ Window {
     height: 768
     title: qsTr("Hello World")
 
-    Rectangle {
-        id: root
-        color: "black"
-        anchors.fill: parent
+//    Rectangle {
+//        id: root
+//        color: "black"
+//        anchors.fill: parent
 
-        property int padding: 40
-        property int duration: 4000
-        property bool running: false
-        property double opa: 1
+//        property int padding: 40
+//        property int duration: 4000
+//        property bool running: false
+//        property double opa: 1
 
-        Rectangle {
-            id: box
-            x: root.padding;
-            y: (root.height-height)/2
-            height: 100
-            width: 100
-            color: "red"
-            opacity: opa
+//        Rectangle {
+//            id: box
+//            x: root.padding;
+//            y: (root.height-height)/2
+//            height: 100
+//            width: 100
+//            color: "red"
+//            opacity: opa
 
-            NumberAnimation on x {
-                to: root.width - box.width - root.padding
-                duration: root.duration
-                running: root.running
-            }
-            RotationAnimation on rotation {
-                to: 360
-                duration: root.duration
-                running: root.running
-            }
+//            NumberAnimation on x {
+//                to: root.width - box.width - root.padding
+//                duration: root.duration
+//                running: root.running
+//            }
+//            RotationAnimation on rotation {
+//                to: 360
+//                duration: root.duration
+//                running: root.running
+//            }
 
-            ColorAnimation {
-                from: "white"
-                to: "black"
-                duration: 200
-                running: root.running
+//            ColorAnimation {
+//                from: "white"
+//                to: "black"
+//                duration: 200
+//                running: root.running
+//            }
+//        }
+
+//        MouseArea {
+//            anchors.fill: parent
+//            onClicked: root.running = true
+//        }
+
+//    }
+
+    ListView {
+        objectName: "view"
+        width: parent.width
+        height: parent.height
+        model: ListModel { ListElement { colorRole: "green" }
+                           ListElement { colorRole: "red" }
+                           ListElement { colorRole: "yellow" } }
+        delegate: Rectangle {
+            objectName: "testItem"
+            width: 1024
+            height: 256
+            color: colorRole
+
+            function jw()
+            {
+                console.log("jwjwjw!!")
             }
         }
+    }
 
-        MouseArea {
-            anchors.fill: parent
-            onClicked: root.running = true
+    QtObject {
+        id: id_object
+        objectName: "objectName"
+
+        function jwobject()
+        {
+            console.log("jwjw~")
         }
-
     }
 
 }
