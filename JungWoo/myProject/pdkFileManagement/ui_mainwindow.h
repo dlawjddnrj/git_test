@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'mainwindow.ui'
 **
-** Created by: Qt User Interface Compiler version 5.12.4
+** Created by: Qt User Interface Compiler version 5.14.2
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
 ********************************************************************************/
@@ -132,6 +132,9 @@ public:
 
         lineEdit = new QLineEdit(layoutWidget);
         lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+        QFont font3;
+        font3.setFamily(QString::fromUtf8("Arial"));
+        lineEdit->setFont(font3);
         lineEdit->setAlignment(Qt::AlignCenter);
 
         verticalLayout_2->addWidget(lineEdit);
@@ -150,15 +153,15 @@ public:
         tableWidget->setHorizontalHeaderItem(0, __qtablewidgetitem);
         tableWidget->setObjectName(QString::fromUtf8("tableWidget"));
         tableWidget->setEnabled(true);
-        QFont font3;
-        font3.setFamily(QString::fromUtf8("Arial"));
-        font3.setPointSize(12);
-        font3.setBold(true);
-        font3.setUnderline(false);
-        font3.setWeight(75);
-        font3.setKerning(false);
-        font3.setStyleStrategy(QFont::PreferDefault);
-        tableWidget->setFont(font3);
+        QFont font4;
+        font4.setFamily(QString::fromUtf8("Arial"));
+        font4.setPointSize(12);
+        font4.setBold(true);
+        font4.setUnderline(false);
+        font4.setWeight(75);
+        font4.setKerning(false);
+        font4.setStyleStrategy(QFont::PreferDefault);
+        tableWidget->setFont(font4);
         tableWidget->setLayoutDirection(Qt::LeftToRight);
         tableWidget->setEditTriggers(QAbstractItemView::AnyKeyPressed|QAbstractItemView::CurrentChanged|QAbstractItemView::DoubleClicked|QAbstractItemView::EditKeyPressed);
         tableWidget->setRowCount(0);
@@ -223,23 +226,23 @@ public:
 
     void retranslateUi(QMainWindow *MainWindow)
     {
-        MainWindow->setWindowTitle(QApplication::translate("MainWindow", "PDK_FileManagement", nullptr));
-        actionSave->setText(QApplication::translate("MainWindow", "Save", nullptr));
-        noHelp->setText(QApplication::translate("MainWindow", "No Help", nullptr));
-        sorry->setText(QApplication::translate("MainWindow", "Sorry ^o^", nullptr));
-        actionExit->setText(QApplication::translate("MainWindow", "Exit", nullptr));
-        pushButton_quit->setText(QApplication::translate("MainWindow", "Quit", nullptr));
+        MainWindow->setWindowTitle(QCoreApplication::translate("MainWindow", "PDK_FileManagement", nullptr));
+        actionSave->setText(QCoreApplication::translate("MainWindow", "Save", nullptr));
+        noHelp->setText(QCoreApplication::translate("MainWindow", "No Help", nullptr));
+        sorry->setText(QCoreApplication::translate("MainWindow", "Sorry ^o^", nullptr));
+        actionExit->setText(QCoreApplication::translate("MainWindow", "Exit", nullptr));
+        pushButton_quit->setText(QCoreApplication::translate("MainWindow", "Quit", nullptr));
         label_nowDate->setText(QString());
         label_nowTime->setText(QString());
-        label->setText(QApplication::translate("MainWindow", "\354\225\204\353\236\230\354\227\220 \353\263\264\354\235\264\353\212\224 \354\271\270\354\227\220 PDK File\353\252\205\354\235\204 \354\236\205\353\240\245 \355\233\204 Add \353\262\204\355\212\274\354\235\204 \353\210\204\353\245\264\354\213\234\354\230\244.", nullptr));
+        label->setText(QCoreApplication::translate("MainWindow", "\354\225\204\353\236\230\354\227\220 \353\263\264\354\235\264\353\212\224 \354\271\270\354\227\220 PDK File\353\252\205\354\235\204 \354\236\205\353\240\245 \355\233\204 Add \353\262\204\355\212\274\354\235\204 \353\210\204\353\245\264\354\213\234\354\230\244.", nullptr));
         lineEdit->setText(QString());
         QTableWidgetItem *___qtablewidgetitem = tableWidget->horizontalHeaderItem(0);
-        ___qtablewidgetitem->setText(QApplication::translate("MainWindow", "PDK File Name", nullptr));
-        pushButton_add->setText(QApplication::translate("MainWindow", "Add", nullptr));
-        pushButton_delete->setText(QApplication::translate("MainWindow", "Delete", nullptr));
-        pushButton_load->setText(QApplication::translate("MainWindow", "Load", nullptr));
-        menuFile->setTitle(QApplication::translate("MainWindow", "File", nullptr));
-        menuHelp->setTitle(QApplication::translate("MainWindow", "Help", nullptr));
+        ___qtablewidgetitem->setText(QCoreApplication::translate("MainWindow", "PDK File Name", nullptr));
+        pushButton_add->setText(QCoreApplication::translate("MainWindow", "Add", nullptr));
+        pushButton_delete->setText(QCoreApplication::translate("MainWindow", "Delete", nullptr));
+        pushButton_load->setText(QCoreApplication::translate("MainWindow", "Load", nullptr));
+        menuFile->setTitle(QCoreApplication::translate("MainWindow", "File", nullptr));
+        menuHelp->setTitle(QCoreApplication::translate("MainWindow", "Help", nullptr));
     } // retranslateUi
 
 };

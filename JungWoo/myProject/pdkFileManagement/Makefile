@@ -180,6 +180,16 @@ Makefile: pdkFileManagement.pro C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\win32-
 		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri \
 		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri \
 		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d_private.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender_private.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils.pri \
+		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils_private.pri \
 		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri \
 		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri \
 		C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri \
@@ -366,6 +376,16 @@ C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript.pri:
 C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qmlworkerscript_private.pri:
 C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_qtmultimediaquicktools_private.pri:
 C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3d_private.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dassetimport_private.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3drender_private.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3druntimerender_private.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils.pri:
+C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick3dutils_private.pri:
 C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quick_private.pri:
 C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2.pri:
 C:\Qt\Qt5.14.2\5.14.2\msvc2017_64\mkspecs\modules\qt_lib_quickcontrols2_private.pri:

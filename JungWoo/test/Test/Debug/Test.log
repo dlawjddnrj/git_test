@@ -1,0 +1,5 @@
+﻿  main.cpp
+C:\Users\ghktk\Desktop\test\Test\main.cpp(28,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\ghktk\Desktop\test\Test\main.cpp(35,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+C:\Users\ghktk\Desktop\test\Test\main.cpp(41,20): warning C4018: '<': signed 또는 unsigned가 일치하지 않습니다.
+  Test.vcxproj -> C:\Users\ghktk\Desktop\test\Debug\Test.exe

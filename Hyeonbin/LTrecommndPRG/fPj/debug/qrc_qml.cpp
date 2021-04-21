@@ -1,13 +1,13 @@
 /****************************************************************************
 ** Resource object code
 **
-** Created by: The Resource Compiler for Qt version 5.12.4
+** Created by: The Resource Compiler for Qt version 5.14.2
 **
 ** WARNING! All changes made in this file will be lost!
 *****************************************************************************/
 
 static const unsigned char qt_resource_data[] = {
-  // C:/Test/git_test/Hyeonbin/LTrecommndPRG/fPj/main.qml
+  // C:/Users/ghktk/Desktop/study_git/Hyeonbin/LTrecommndPRG/fPj/main.qml
   0x0,0x0,0x4,0x31,
   0x0,
   0x0,0x1c,0x7c,0x78,0x9c,0xed,0x58,0x4b,0x6f,0xdb,0x46,0x10,0xbe,0x1b,0xf0,0x7f,
@@ -96,7 +96,7 @@ static const unsigned char qt_resource_struct[] = {
 0x0,0x0,0x0,0x0,0x0,0x0,0x0,0x0,
   // :/main.qml
   0x0,0x0,0x0,0x0,0x0,0x1,0x0,0x0,0x0,0x1,0x0,0x0,0x0,0x0,
-0x0,0x0,0x1,0x6f,0x88,0x1a,0x62,0x57,
+0x0,0x0,0x1,0x71,0x3e,0xce,0x8a,0xb,
 
 };
 
@@ -117,8 +117,17 @@ namespace QT_NAMESPACE {
 #endif
 
 bool qRegisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
-
 bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, const unsigned char *);
+
+#if defined(__ELF__) || defined(__APPLE__)
+static inline unsigned char qResourceFeatureZlib()
+{
+    extern const unsigned char qt_resourceFeatureZlib;
+    return qt_resourceFeatureZlib;
+}
+#else
+unsigned char qResourceFeatureZlib();
+#endif
 
 #ifdef QT_NAMESPACE
 }
@@ -127,16 +136,19 @@ bool qUnregisterResourceData(int, const unsigned char *, const unsigned char *, 
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_qml)();
 int QT_RCC_MANGLE_NAMESPACE(qInitResources_qml)()
 {
+    int version = 3;
     QT_RCC_PREPEND_NAMESPACE(qRegisterResourceData)
-        (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+        (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_qml)();
 int QT_RCC_MANGLE_NAMESPACE(qCleanupResources_qml)()
 {
+    int version = 3;
+    version += QT_RCC_PREPEND_NAMESPACE(qResourceFeatureZlib());
     QT_RCC_PREPEND_NAMESPACE(qUnregisterResourceData)
-       (0x2, qt_resource_struct, qt_resource_name, qt_resource_data);
+       (version, qt_resource_struct, qt_resource_name, qt_resource_data);
     return 1;
 }
 

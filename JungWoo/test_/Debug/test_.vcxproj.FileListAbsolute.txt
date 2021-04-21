@@ -1,0 +1,2 @@
+C:\Users\ghktk\Desktop\test_\Debug\test_.exe
+C:\Users\ghktk\Desktop\test_\Debug\test_.pdb
